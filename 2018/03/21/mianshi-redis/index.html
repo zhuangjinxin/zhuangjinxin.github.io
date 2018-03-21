@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis支持的数据类型有哪些？ String字符串、 list列表、 Hash哈希、 set集合、 sorted set有序集合(zset)  常用的操作 stirng: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget">
 <meta name="keywords" content="原创">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://blog.zhuangjinxin.top/2018/03/20/hello-world/index.html">
+<meta property="og:title" content="面试汇总:《Redis》">
+<meta property="og:url" content="http://blog.zhuangjinxin.top/2018/03/21/mianshi-redis/index.html">
 <meta property="og:site_name" content="JINXIN">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis支持的数据类型有哪些？ String字符串、 list列表、 Hash哈希、 set集合、 sorted set有序集合(zset)  常用的操作 stirng: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T02:40:06.780Z">
+<meta property="og:updated_time" content="2018-03-21T09:44:10.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="面试汇总:《Redis》">
+<meta name="twitter:description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis支持的数据类型有哪些？ String字符串、 list列表、 Hash哈希、 set集合、 sorted set有序集合(zset)  常用的操作 stirng: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.zhuangjinxin.top/2018/03/20/hello-world/"/>
+  <link rel="canonical" href="http://blog.zhuangjinxin.top/2018/03/21/mianshi-redis/"/>
 
 
 
 
 
-  <title>Hello World | JINXIN</title>
+  <title>面试汇总:《Redis》 | JINXIN</title>
   
 
 
@@ -274,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.zhuangjinxin.top/2018/03/20/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://blog.zhuangjinxin.top/2018/03/21/mianshi-redis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
@@ -291,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">面试汇总:《Redis》</h1>
         
 
         <div class="post-meta">
@@ -303,8 +303,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T22:54:07+08:00">
-                2018-03-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T17:36:29+08:00">
+                2018-03-21
               </time>
             
 
@@ -313,6 +313,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/job/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -341,16 +363,52 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h3 id="为什么Redis性能高？"><a href="#为什么Redis性能高？" class="headerlink" title="为什么Redis性能高？"></a>为什么Redis性能高？</h3><ul>
+<li>纯内存存储</li>
+<li>I/O多路复用</li>
+<li>单线程架构</li>
+</ul>
+<h3 id="Redis支持的数据类型有哪些？"><a href="#Redis支持的数据类型有哪些？" class="headerlink" title="Redis支持的数据类型有哪些？"></a>Redis支持的数据类型有哪些？</h3><ul>
+<li>String字符串、</li>
+<li>list列表、</li>
+<li>Hash哈希、</li>
+<li>set集合、</li>
+<li>sorted set有序集合(zset)</li>
+</ul>
+<h3 id="常用的操作"><a href="#常用的操作" class="headerlink" title="常用的操作"></a>常用的操作</h3><ul>
+<li>stirng: set get|mset mget|del|incr decr|append strlen setrange getrange</li>
+<li>hash: hset hget|hmset hmget|hdel|hgetall hexists hkeys hvalues|hsetnx hincrby hstrlen</li>
+<li>list: lpush rpush|lpop rpop blpop brpop|lrange lindex llen|lset</li>
+<li>set: sadd srem scard smermbers sismember|srandmember spop|sinter sunion sdiff</li>
+<li>zset: zadd zrem zcard zincrby|zrank zrevrank zrange zrangebyscore|zinterstore zunionstore</li>
+<li>键管理: type object exists dbsize |rename renamenx|randomkey</li>
+<li>过期时间: expire expireat pexpire pexpireat ttl pttl persist</li>
+<li>迁移方式: move|dump+restore|migrate</li>
+<li>遍历键: keys scan</li>
+<li>数据库: select flushdb flushall</li>
+</ul>
+<h3 id="Redis的应用"><a href="#Redis的应用" class="headerlink" title="Redis的应用"></a>Redis的应用</h3><ul>
+<li>实现分布式锁: setnx</li>
+<li>实现栈(Stack): lpush + lpop</li>
+<li>实现队列(Queue): lpush + rpop</li>
+<li>实现消息队列(MQ): lpush + brpop</li>
+<li>给用户打标签(Tag): sadd</li>
+<li>生成随机数/抽奖: srandmember/spop</li>
+<li>实现社交需求：sadd+sinter</li>
+<li>实现排行榜/点赞数：sortedset</li>
+<li>实现延迟队列: sortedset（score时间戳）</li>
+</ul>
+<h3 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h3><ul>
+<li>Redis从3.0版本开始支持集群(Redis Cluster)；</li>
+<li>scan命令可以解决keys命令可能带来的阻塞问题；</li>
+<li>set命令会删除字符串类型键的过期时间；</li>
+<li>批量操作可以提高命令执行效率(mset/mget/hmset)；</li>
+</ul>
+<h3 id="Redis持久化机制"><a href="#Redis持久化机制" class="headerlink" title="Redis持久化机制"></a>Redis持久化机制</h3><ul>
+<li>RDB 把内存中的数据以快照的方式写入二进制文件中 dump.rdb</li>
+<li>AOF 把每一个收到的写命令都通过write函数追加到文件中 appendonly.aof bgrewriteaof压缩aof的持久化文件</li>
+</ul>
+<h3 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h3>
       
     </div>
     
@@ -380,15 +438,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/21/mianshi-mysql/" rel="next" title="面试汇总:《MySQL》">
+                <i class="fa fa-chevron-left"></i> 面试汇总:《MySQL》
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/21/mianshi-java/" rel="prev" title="面试汇总:《Java基础》">
-                面试汇总:《Java基础》 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -520,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么Redis性能高？"><span class="nav-number">1.</span> <span class="nav-text">为什么Redis性能高？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis支持的数据类型有哪些？"><span class="nav-number">2.</span> <span class="nav-text">Redis支持的数据类型有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的操作"><span class="nav-number">3.</span> <span class="nav-text">常用的操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis的应用"><span class="nav-number">4.</span> <span class="nav-text">Redis的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小知识点"><span class="nav-number">5.</span> <span class="nav-text">小知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis持久化机制"><span class="nav-number">6.</span> <span class="nav-text">Redis持久化机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis主从复制"><span class="nav-number">7.</span> <span class="nav-text">Redis主从复制</span></a></li></ol></div>
             
 
           </div>
