@@ -363,12 +363,12 @@
       
         
           
-            <h3 id="为什么Redis性能高？"><a href="#为什么Redis性能高？" class="headerlink" title="为什么Redis性能高？"></a>为什么Redis性能高？</h3><ul>
+            <h3 id="为什么Redis性能高"><a href="#为什么Redis性能高" class="headerlink" title="为什么Redis性能高"></a>为什么Redis性能高</h3><ul>
 <li>纯内存存储</li>
 <li>I/O多路复用</li>
 <li>单线程架构</li>
 </ul>
-<h3 id="Redis的数据类型？"><a href="#Redis的数据类型？" class="headerlink" title="Redis的数据类型？"></a>Redis的数据类型？</h3><ul>
+<h3 id="Redis的数据类型"><a href="#Redis的数据类型" class="headerlink" title="Redis的数据类型"></a>Redis的数据类型</h3><ul>
 <li>字符串 string</li>
 <li>列表 list</li>
 <li>哈希 Hash</li>
@@ -376,12 +376,14 @@
 <li>有序集合 sorted set(zset)</li>
 </ul>
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
-<li>stirng: set get|mset mget|del|incr decr|append strlen setrange getrange</li>
+<li>string: set get|mset mget|del|incr decr|append strlen setrange getrange</li>
 <li>hash: hset hget|hmset hmget|hdel|hgetall hexists hkeys hvalues|hsetnx hincrby hstrlen</li>
 <li>list: lpush rpush|lpop rpop blpop brpop|lrange lindex llen|lset</li>
 <li>set: sadd srem scard smermbers sismember|srandmember spop|sinter sunion sdiff</li>
-<li>zset: zadd zrem zcard zincrby|zrank zrevrank zrange zrangebyscore|zinterstore zunionstore</li>
-<li>键管理: type object exists dbsize |rename renamenx|randomkey</li>
+<li><p>zset: zadd zrem zcard zincrby|zrank zrevrank zrange zrangebyscore|zinterstore zunionstore</p>
+</li>
+<li><p>键管理: type object exists dbsize |rename renamenx|randomkey</p>
+</li>
 <li>过期时间: expire expireat pexpire pexpireat ttl pttl persist</li>
 <li>迁移方式: move|dump+restore|migrate</li>
 <li>遍历键: keys scan</li>
