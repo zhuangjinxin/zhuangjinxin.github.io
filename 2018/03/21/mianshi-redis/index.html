@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="为什么Redis性能高 纯内存存储 I/O多路复用 单线程架构  Redis的数据类型 字符串 string 列表 list 哈希 Hash 集合 set 有序集合 sorted set(zset)  常用命令 string: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget|hmset">
+<meta name="description" content="为什么Redis性能高 纯内存存储 I/O多路复用 单线程架构  Redis的数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget|hmset">
 <meta name="keywords" content="原创">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试汇总:《Redis》">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/03/21/mianshi-redis/index.html">
 <meta property="og:site_name" content="JINXIN">
-<meta property="og:description" content="为什么Redis性能高 纯内存存储 I/O多路复用 单线程架构  Redis的数据类型 字符串 string 列表 list 哈希 Hash 集合 set 有序集合 sorted set(zset)  常用命令 string: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget|hmset">
+<meta property="og:description" content="为什么Redis性能高 纯内存存储 I/O多路复用 单线程架构  Redis的数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget|hmset">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T10:05:17.919Z">
+<meta property="og:updated_time" content="2018-03-21T10:06:23.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《Redis》">
-<meta name="twitter:description" content="为什么Redis性能高 纯内存存储 I/O多路复用 单线程架构  Redis的数据类型 字符串 string 列表 list 哈希 Hash 集合 set 有序集合 sorted set(zset)  常用命令 string: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget|hmset">
+<meta name="twitter:description" content="为什么Redis性能高 纯内存存储 I/O多路复用 单线程架构  Redis的数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get|mset mget|del|incr decr|append strlen setrange getrange hash: hset hget|hmset">
 
 
 
@@ -370,8 +370,8 @@
 </ul>
 <h3 id="Redis的数据类型"><a href="#Redis的数据类型" class="headerlink" title="Redis的数据类型"></a>Redis的数据类型</h3><ul>
 <li>字符串 string</li>
-<li>列表 list</li>
 <li>哈希 Hash</li>
+<li>列表 list</li>
 <li>集合 set</li>
 <li>有序集合 sorted set(zset)</li>
 </ul>
@@ -383,7 +383,7 @@
 <li><strong>zset</strong>: zadd zrem zcard zincrby|zrank zrevrank zrange zrangebyscore|zinterstore zunionstore</li>
 <li><strong>键管理</strong>: type object exists dbsize |rename renamenx| randomkey</li>
 <li><strong>过期时间</strong>: expire expireat pexpire pexpireat ttl pttl persist</li>
-<li><strong>迁移方式</strong>: move|dump+restore|migrate</li>
+<li><strong>迁移</strong>: move|dump+restore|migrate</li>
 <li><strong>遍历键</strong>: keys scan</li>
 <li><strong>数据库</strong>: select flushdb flushall</li>
 </ul>
