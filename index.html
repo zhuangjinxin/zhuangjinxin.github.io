@@ -393,6 +393,7 @@
 <li><strong>list</strong>: lpush rpush lpop rpop blpop brpop lrange lindex llen lset</li>
 <li><strong>set</strong>: sadd srem scard smermbers sismember srandmember spop|sinter sunion sdiff</li>
 <li><strong>zset</strong>: zadd zrem zcard zincrby zrank zrevrank zrange zrangebyscore zinterstore zunionstore</li>
+<li><strong>发布订阅</strong>: publish subscribe unsubscribe psubscribe pubsub</li>
 <li><strong>键管理</strong>: type object exists dbsize rename renamenx randomkey</li>
 <li><strong>过期时间</strong>: expire expireat pexpire pexpireat ttl pttl persist</li>
 <li><strong>迁移</strong>: move dump+restore migrate</li>
@@ -417,8 +418,8 @@
 <li>实现延迟队列: sortedset（score时间戳）</li>
 </ul>
 <h3 id="Redis持久化机制"><a href="#Redis持久化机制" class="headerlink" title="Redis持久化机制"></a>Redis持久化机制</h3><ul>
-<li>RDB 把内存中的数据以快照的方式写入二进制文件中 dump.rdb</li>
-<li>AOF 把每一个收到的写命令都通过write函数追加到文件中 appendonly.aof bgrewriteaof压缩aof的持久化文件</li>
+<li>RDB fork操作创建子进程把内存中的数据以快照的方式写入二进制文件中 dump.rdb</li>
+<li>AOF 把每一个收到的写命令都通过write函数追加到文件中（appendonly.aof）,bgrewriteaof压缩aof的持久化文件</li>
 </ul>
 <h3 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h3>
           
