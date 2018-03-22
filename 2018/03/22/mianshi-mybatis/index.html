@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JINXIN">
 <meta property="og:description" content="讲讲MyBatisMyBatis是一款持久层框架，支持定制化SQL、存储过程和高级映射。可以使用简单的XML或注解将接口和POJOs映射成数据库中的记录。 Namaspace的作用绑定Dao接口，不用写实现类，通过绑定可以找到相对应的SQL语句。 MyBatis的常用标签 select insert update delete if、choose、when、otherwise trim、where">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T09:33:09.724Z">
+<meta property="og:updated_time" content="2018-03-22T09:57:00.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《MyBatis》">
 <meta name="twitter:description" content="讲讲MyBatisMyBatis是一款持久层框架，支持定制化SQL、存储过程和高级映射。可以使用简单的XML或注解将接口和POJOs映射成数据库中的记录。 Namaspace的作用绑定Dao接口，不用写实现类，通过绑定可以找到相对应的SQL语句。 MyBatis的常用标签 select insert update delete if、choose、when、otherwise trim、where">
@@ -388,7 +388,7 @@
 <p>注：trim标签(前缀prefix 后缀suffix  移除第一个prefixOverrides 移除最后一个suffixOverrides)</p>
 <h4 id="与-的区别"><a href="#与-的区别" class="headerlink" title="#{}与${}的区别"></a>#{}与${}的区别</h4><ul>
 <li>#{} 在JDBC预编译语句时解析为一个参数化占位符</li>
-<li>${} 在动态SQL解析时进行变量替换 </li>
+<li>${} 在动态SQL解析时进行字符串拼接(变量替换) </li>
 </ul>
 <p>注:使用#{}可以防止SQL注入。</p>
 <h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ul>
