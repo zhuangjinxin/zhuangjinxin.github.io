@@ -421,7 +421,20 @@
 <li>RDB fork操作创建子进程把内存中的数据以快照的方式写入二进制文件中 dump.rdb</li>
 <li>AOF 把每一个收到的写命令都通过write函数追加到文件中（appendonly.aof）,bgrewriteaof压缩aof的持久化文件</li>
 </ul>
-<h3 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h3>
+<h3 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h3><ul>
+<li>作用：读写分离、故障转移、数据备份</li>
+<li>拓扑结构：一主一从、一主多从、树状主从</li>
+<li>复制过程<ol>
+<li>从节点保存主节点信息</li>
+<li>主从建立socket连接</li>
+<li>从节点发送ping命令</li>
+<li>权限认证</li>
+<li>同步数据集</li>
+<li>命令持续复制<br>注：redis2.8后 支持psync命令，该命令支持断点续传，减少开销。</li>
+</ol>
+</li>
+</ul>
+
           
         
       
