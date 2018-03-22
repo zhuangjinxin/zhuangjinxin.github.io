@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JINXIN">
 <meta property="og:description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis常用数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmse">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T06:43:15.703Z">
+<meta property="og:updated_time" content="2018-03-22T06:48:11.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《Redis》">
 <meta name="twitter:description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis常用数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmse">
@@ -403,7 +403,6 @@
 <li><strong>数据库</strong>: select flushdb flushall</li>
 </ul>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>Redis从3.0版本开始支持集群(Redis Cluster)；</li>
 <li>scan命令可以解决keys命令可能带来的阻塞问题；</li>
 <li>set命令会删除字符串类型键的过期时间；</li>
 <li>批量操作可以提高命令执行效率(mset/mget/hmset)；</li>
@@ -436,7 +435,8 @@
 </ol>
 </li>
 </ul>
-<p>注：redis2.8后 支持psync命令，该命令支持断点续传，减少开销。</p>
+<p>注：Redis2.8后 支持psync命令，该命令支持断点续传，减少开销。</p>
+<h3 id="Redis集群"><a href="#Redis集群" class="headerlink" title="Redis集群"></a>Redis集群</h3><p>注：Redis从3.0版本，官方开始支持集群(Redis Cluster)。</p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
 <li>《Redis开发与运维》 付磊、张益军 编著</li>
 </ul>
@@ -614,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么Redis性能高？"><span class="nav-number">1.</span> <span class="nav-text">为什么Redis性能高？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis常用数据类型"><span class="nav-number">2.</span> <span class="nav-text">Redis常用数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">3.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">4.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis的应用"><span class="nav-number">5.</span> <span class="nav-text">Redis的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis持久化机制"><span class="nav-number">6.</span> <span class="nav-text">Redis持久化机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis主从复制"><span class="nav-number">7.</span> <span class="nav-text">Redis主从复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">8.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么Redis性能高？"><span class="nav-number">1.</span> <span class="nav-text">为什么Redis性能高？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis常用数据类型"><span class="nav-number">2.</span> <span class="nav-text">Redis常用数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用命令"><span class="nav-number">3.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">4.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis的应用"><span class="nav-number">5.</span> <span class="nav-text">Redis的应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis持久化机制"><span class="nav-number">6.</span> <span class="nav-text">Redis持久化机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis主从复制"><span class="nav-number">7.</span> <span class="nav-text">Redis主从复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redis集群"><span class="nav-number">8.</span> <span class="nav-text">Redis集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">9.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
