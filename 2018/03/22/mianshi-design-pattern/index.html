@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/factory-normal.png">
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/factory-multi-method.jpg">
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/abstract-factory.jpg">
-<meta property="og:updated_time" content="2018-03-23T13:42:49.985Z">
+<meta property="og:updated_time" content="2018-03-23T14:02:50.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《设计模式》">
 <meta name="twitter:description" content="设计模式代表了最佳的实践,是一套被反复使用、多数人知晓、经过分类编目、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 列举常用的设计模式创建型模式: 单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式结构型模式: 过滤器模式、装饰器模式、适配器模式、代理模式、外观模式、桥接模式、组合模式、享元模式行为型模式: 命令模式、解释器模式、观察者模式、策略模式">
@@ -413,7 +413,7 @@
 <h4 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h4><p><strong>定义</strong>: 把复杂对象的构建和表示分离，同样的构建过程可以创建不同的表示。</p>
 <h4 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h4><p><strong>定义</strong>: 用原型实例指定创建对象的种类，并通过拷贝这些原型创建新的对象</p>
 <h4 id="模版方法模式"><a href="#模版方法模式" class="headerlink" title="模版方法模式"></a>模版方法模式</h4><p><strong>定义</strong>: 把公共的方法抽象出来放在抽象类中作为模版，在子类中重写这些方法具体实现；<br><strong>结构</strong>: 一个抽象类 + 一组(个)实现类<br><strong>解决了什么问题</strong>：一些方法通用，却在每个子类都重新写了这些方法<br><strong>应用场景</strong>：多个子类中有相同的方法、主框架相同细节不同</p>
-<h4 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h4><p><strong>定义</strong>: 定义一组算法，将每个算法都封装起来，并且使他们之间可以互换。</p>
+<h4 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h4><p><strong>定义</strong>: 定义一组算法，将每个算法都封装起来，并且使他们之间可以互换。<br><strong>结构</strong>：Context上下文 + 抽象策略类 + 具体策略类<br><strong>解决什么问题</strong>：避免了在多种相似算法的情况下因使用if…else带了的复杂性</p>
 <h4 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h4><p><strong>定义</strong>: 用一个中介者对象封装一系列的对象交互，中介者使各对象不需要显示地相互作用，从而使耦合松散，而且可以独立地改变它们之间的交互。</p>
 <h4 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h4><p><strong>定义</strong>: 当一个对象改变状态时，所有依赖于它的对象都会得到通知并自动更新。<br><strong>结构</strong>: 观察者接口 + 观察者实现 + 被观察者接口 + 被观察者实现<br><strong>应用场景</strong>：Java中Observer接口及它的实现类</p>
 <h4 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h4><p><strong>定义</strong>: 封装某些作用于某种数据结构中各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。</p>
