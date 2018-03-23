@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/factory-normal.png">
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/factory-multi-method.jpg">
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/abstract-factory.jpg">
-<meta property="og:updated_time" content="2018-03-23T08:40:29.777Z">
+<meta property="og:updated_time" content="2018-03-23T09:24:18.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《设计模式》">
 <meta name="twitter:description" content="设计模式代表了最佳的实践,是一套被反复使用、多数人知晓、经过分类编目、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 列举常用的设计模式创建型模式: 单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式结构型模式: 过滤器模式、装饰器模式、适配器模式、代理模式、外观模式、桥接模式、组合模式、享元模式行为型模式: 命令模式、解释器模式、观察者模式、策略模式">
@@ -417,7 +417,7 @@
 <h4 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h4><p><strong>定义</strong>: 定义对象间一种一对多的依赖关系，使得当每一个对象改变状态，则所有依赖于它的对象都会得到通知并自动更新。</p>
 <h4 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h4><p><strong>定义</strong>: 封装某些作用于某种数据结构中各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。</p>
 <h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p><strong>定义</strong>: 将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
-<h4 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h4><p><strong>定义</strong>: 使多个对象都有机会处理请求，从而避免了请求的发送者和接收者之间的耦合关系。将这些对象连成一条链，并沿着这条链传递该请求，直到有对象处理它为止。</p>
+<h4 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h4><p><strong>定义</strong>: 把多个对象连成一条链，沿着链传递请求，直到有对象处理它。<br><strong>做法</strong>: 把条件判断的逻辑放到各个处理类中，客户端可以随意设定处理顺序；<br><strong>解决了什么问题</strong>：降低耦合度</p>
 <h4 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h4><p><strong>定义</strong>: 定义一组算法，将每个算法都封装起来，并且使他们之间可以互换。</p>
 <h4 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h4><p><strong>定义</strong>: 提供一种方法访问一个容器对象中各个元素，而又不暴露该对象的内部细节。<br><strong>应用场景</strong>: Iterator遍历集合元素(List、Set、Map、数组)</p>
 <h4 id="解释器模式"><a href="#解释器模式" class="headerlink" title="解释器模式"></a>解释器模式</h4><p><strong>定义</strong>: 给定一种语言，定义他的文法的一种表示，并定义一个解释器，该解释器使用该表示来解释语言中句子。</p>
