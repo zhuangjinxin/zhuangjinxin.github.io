@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/factory-normal.png">
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/factory-multi-method.jpg">
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-design-pattern/abstract-factory.jpg">
-<meta property="og:updated_time" content="2018-03-23T10:09:28.685Z">
+<meta property="og:updated_time" content="2018-03-23T10:37:39.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《设计模式》">
 <meta name="twitter:description" content="设计模式代表了最佳的实践,是一套被反复使用、多数人知晓、经过分类编目、代码设计经验的总结。使用设计模式是为了重用代码、让代码更容易被他人理解、保证代码可靠性。 列举常用的设计模式创建型模式: 单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式结构型模式: 过滤器模式、装饰器模式、适配器模式、代理模式、外观模式、桥接模式、组合模式、享元模式行为型模式: 命令模式、解释器模式、观察者模式、策略模式">
@@ -417,7 +417,7 @@
 <h4 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h4><p><strong>定义</strong>: 用一个中介者对象封装一系列的对象交互，中介者使各对象不需要显示地相互作用，从而使耦合松散，而且可以独立地改变它们之间的交互。</p>
 <h4 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h4><p><strong>定义</strong>: 定义对象间一种一对多的依赖关系，使得当每一个对象改变状态，则所有依赖于它的对象都会得到通知并自动更新。</p>
 <h4 id="访问者模式"><a href="#访问者模式" class="headerlink" title="访问者模式"></a>访问者模式</h4><p><strong>定义</strong>: 封装某些作用于某种数据结构中各元素的操作，它可以在不改变数据结构的前提下定义作用于这些元素的新的操作。</p>
-<h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p><strong>定义</strong>: 将一个请求封装成一个对象，从而让你使用不同的请求把客户端参数化，对请求排队或者记录请求日志，可以提供命令的撤销和恢复功能。</p>
+<h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p><strong>定义</strong>: 将请求封装成对象，可以用不同的请求把客户端参数化。<br><strong>结构</strong>: 命令抽象类 + 命令实现类 + 客户端调用类 + 调用者 + 接收者<br><strong>做法</strong>: 把调用者和执行者分开，不必关心对方如何操作<br><strong>应用场景</strong>：实现请求-响应功能</p>
 <h4 id="责任链模式"><a href="#责任链模式" class="headerlink" title="责任链模式"></a>责任链模式</h4><p><strong>定义</strong>: 把多个对象连成一条链，沿着链传递请求，直到有对象处理它。<br><strong>做法</strong>: 把条件判断的逻辑放到各个处理类中，客户端可以随意设定处理顺序；<br><strong>结构</strong>: 一个抽象处理类 + 一组具体处理类<br><strong>解决了什么问题</strong>：降低耦合度</p>
 <h4 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h4><p><strong>定义</strong>: 提供一种遍历容器中元素的方法，而不暴露该容器对象的内部细节。<br><strong>应用场景</strong>: Iterator遍历集合元素(List、Set、Map、数组)</p>
 <h4 id="解释器模式"><a href="#解释器模式" class="headerlink" title="解释器模式"></a>解释器模式</h4><p><strong>定义</strong>: 给一种语言定义文法、定义解释器，用解释器解释文法。<br><strong>结构</strong>：抽象解释器 + 终结符表达式 + 非终结符表达式 + 环境角色<br><strong>应用场景</strong>:重复的加减乘除运算</p>
