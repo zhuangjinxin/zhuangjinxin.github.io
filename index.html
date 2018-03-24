@@ -1399,7 +1399,8 @@
 
       
         
-          <h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><h5 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h5><p><strong>概念</strong>：<br>AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。</p>
+          <h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><p>Spring是一套轻量级的、企业级的Java开发框架。</p>
+<h5 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h5><p><strong>概念</strong>：<br>AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。</p>
 <p><strong>应用</strong>：<br>日志模块、事务管理、全权限管理等</p>
 <p><strong>实现原理</strong>：<br>动态代理 (Java反射机制)<br>动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Invoke方法里写增强处理的逻辑，这个公共代理类在运行的时候才能明确自己要代理的对象，同时可以实现该被代理类的方法的实现，然后在实现类方法的时候可以进行增强处理。</p>
 <p><strong>实现的方式</strong>：<br>1.通过注解 @Aspect定义切面 @Before/@After/@Around(表达式) 在切入方法执行前后插入功能<br>2.通过Spring的API实现AOP<br>3.自定义类来实现AOP，不实现spring的自带的通知</p>
