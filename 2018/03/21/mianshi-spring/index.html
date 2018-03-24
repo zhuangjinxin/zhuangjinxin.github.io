@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="SpringSpring是一套轻量级的、企业级的Java开发框架。 AOP概念：AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。 应用：日志模块、事务管理、全权限管理等 实现原理：动态代理 (Java反射机制)动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Inv">
+<meta name="description" content="SpringSpring是一套轻量级的、企业级的Java开发框架。 AOP概念：AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。 应用：日志模块、事务管理、权限管理等 实现原理：动态代理 (Java反射机制)动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Invo">
 <meta name="keywords" content="原创,Spring,Spring Boot,Spring Cloud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试汇总:《Spring》">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/03/21/mianshi-spring/index.html">
 <meta property="og:site_name" content="JINXIN">
-<meta property="og:description" content="SpringSpring是一套轻量级的、企业级的Java开发框架。 AOP概念：AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。 应用：日志模块、事务管理、全权限管理等 实现原理：动态代理 (Java反射机制)动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Inv">
+<meta property="og:description" content="SpringSpring是一套轻量级的、企业级的Java开发框架。 AOP概念：AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。 应用：日志模块、事务管理、权限管理等 实现原理：动态代理 (Java反射机制)动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Invo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-24T16:06:21.350Z">
+<meta property="og:updated_time" content="2018-03-24T16:10:20.493Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《Spring》">
-<meta name="twitter:description" content="SpringSpring是一套轻量级的、企业级的Java开发框架。 AOP概念：AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。 应用：日志模块、事务管理、全权限管理等 实现原理：动态代理 (Java反射机制)动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Inv">
+<meta name="twitter:description" content="SpringSpring是一套轻量级的、企业级的Java开发框架。 AOP概念：AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。 应用：日志模块、事务管理、权限管理等 实现原理：动态代理 (Java反射机制)动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Invo">
 
 
 
@@ -379,14 +379,14 @@
       
         <h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><p>Spring是一套轻量级的、企业级的Java开发框架。</p>
 <h5 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h5><p><strong>概念</strong>：<br>AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。</p>
-<p><strong>应用</strong>：<br>日志模块、事务管理、全权限管理等</p>
+<p><strong>应用</strong>：<br>日志模块、事务管理、权限管理等</p>
 <p><strong>实现原理</strong>：<br>动态代理 (Java反射机制)<br>动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Invoke方法里写增强处理的逻辑，这个公共代理类在运行的时候才能明确自己要代理的对象，同时可以实现该被代理类的方法的实现，然后在实现类方法的时候可以进行增强处理。</p>
 <p><strong>实现的方式</strong>：<br>1.通过注解 @Aspect定义切面 @Before/@After/@Around(表达式) 在切入方法执行前后插入功能<br>2.通过Spring的API实现AOP<br>3.自定义类来实现AOP，不实现spring的自带的通知<br><a id="more"></a><br><strong>用到的Jar包</strong>：<br>spring-aop.jar aopalliance.jar aspectsweaver.jar spring-aspects.jar</p>
 <h5 id="IoC"><a href="#IoC" class="headerlink" title="IoC"></a>IoC</h5><p><strong>概念</strong>:<br>IoC 控制反转，创建对象和维护对象间关系的控制权由对象本身转移到了Spring容器。</p>
 <p><strong>实现原理</strong>:<br>依赖注入DI<br>依赖注入的方法：setter注入、注解注入、构造器注入</p>
-<h5 id="Spring的核心模块"><a href="#Spring的核心模块" class="headerlink" title="Spring的核心模块"></a>Spring的核心模块</h5><p>Core、AOP、DAO、ORM、Context、Web、Web MVC</p>
+<h5 id="Spring的核心模块"><a href="#Spring的核心模块" class="headerlink" title="Spring的核心模块"></a>Spring的核心模块</h5><p>Core、Context、AOP、DAO、ORM、Web、Web MVC</p>
 <h5 id="Spring-Bean"><a href="#Spring-Bean" class="headerlink" title="Spring Bean"></a>Spring Bean</h5><p><strong>Bean的作用域</strong>:<br>Singleton 单例<br>Prototype 原型<br>Request 请求<br>Session 会话<br>Global Session 全局会话</p>
-<p><strong>设置</strong>:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean name=<span class="string">""</span> scope-<span class="string">"Singleton"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>通过scope属性设置Bean的作用域：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean name=<span class="string">""</span>  <span class="class"><span class="keyword">class</span></span>=<span class="string">""</span> scope=<span class="string">"Singleton"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
 <p><strong>Bean的生命周期</strong>:</p>
 <h5 id="Spring的事务"><a href="#Spring的事务" class="headerlink" title="Spring的事务"></a>Spring的事务</h5><p><strong>事务的传播特性</strong>:<br><strong>REQUIRED</strong>:（默认）如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务；<br><strong>REQUIRES_NEW</strong>: 创建一个新的事务，如果当前存在事务，则把当前事务挂起；<br><strong>SUPPORTS</strong>: 如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式运行；<br><strong>NOT_SUPPORTED</strong>: 以非事务方式运行，如果当前存在事务，则把当前事务挂起；<br><strong>NEVER</strong>: 以非事务方式运行，如果当前存在事务，则抛出异常；<br><strong>MANDATORY</strong>: 如果当前存在事务，则加入该事务；如果当前没有事务，则抛出异常；<br><strong>NESTED</strong>: 如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于REQUIRED；</p>
 <p><strong>事务的隔离级别</strong><br><strong>DEFAULT</strong>: 默认值 表示使用数据库的默认隔离级别。对于大多数数据库，该值等价于READ_COMMITTED；<br><strong>READ_UNCOMMITTED</strong>: 读未提交 表示一个事务可以读取另一个事务修改但还没有提交的数据；不能防止脏读、不可重复读和幻读；<br><strong>READ_COMMITTED</strong>: 读已提交 表示一个事务只能读取另一个事务已经提交的数据；可以防止脏读；<br><strong>REPEATABLE_READ</strong>: 可重复读 表示一个事务在整个过程中可以重复执行某个查询，并且每次返回的记录都相同；可以防止脏读和不可重复读；<br><strong>SERIALIZABLE</strong>: 可串行化 表示所有的事务依次逐个执行；可以防止脏读、不可重复读和幻读；</p>
