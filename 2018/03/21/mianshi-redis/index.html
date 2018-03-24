@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis常用数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmse">
+<meta name="description" content="为什么Redis性能高？纯内存存储、I/O多路复用、单线程架构 Redis常用数据类型字符串、哈希、列表、集合、有序集合 常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmset hmget hdel hgetall hexists hkeys hvalues">
 <meta name="keywords" content="原创,Redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试汇总:《Redis》">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/03/21/mianshi-redis/index.html">
 <meta property="og:site_name" content="JINXIN">
-<meta property="og:description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis常用数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmse">
+<meta property="og:description" content="为什么Redis性能高？纯内存存储、I/O多路复用、单线程架构 Redis常用数据类型字符串、哈希、列表、集合、有序集合 常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmset hmget hdel hgetall hexists hkeys hvalues">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T12:17:20.987Z">
+<meta property="og:updated_time" content="2018-03-24T00:26:43.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《Redis》">
-<meta name="twitter:description" content="为什么Redis性能高？ 纯内存存储 I/O多路复用 单线程架构  Redis常用数据类型 字符串 string 哈希 Hash 列表 list 集合 set 有序集合 sorted set(zset)  常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmse">
+<meta name="twitter:description" content="为什么Redis性能高？纯内存存储、I/O多路复用、单线程架构 Redis常用数据类型字符串、哈希、列表、集合、有序集合 常用命令 string: set get mset mget del incr decr append strlen setrange getrange hash: hset hget hmset hmget hdel hgetall hexists hkeys hvalues">
 
 
 
@@ -377,18 +377,8 @@
       
 
       
-        <h4 id="为什么Redis性能高？"><a href="#为什么Redis性能高？" class="headerlink" title="为什么Redis性能高？"></a>为什么Redis性能高？</h4><ul>
-<li>纯内存存储</li>
-<li>I/O多路复用</li>
-<li>单线程架构</li>
-</ul>
-<h4 id="Redis常用数据类型"><a href="#Redis常用数据类型" class="headerlink" title="Redis常用数据类型"></a>Redis常用数据类型</h4><ul>
-<li>字符串 string</li>
-<li>哈希 Hash</li>
-<li>列表 list</li>
-<li>集合 set</li>
-<li>有序集合 sorted set(zset)</li>
-</ul>
+        <h4 id="为什么Redis性能高？"><a href="#为什么Redis性能高？" class="headerlink" title="为什么Redis性能高？"></a>为什么Redis性能高？</h4><p>纯内存存储、I/O多路复用、单线程架构</p>
+<h4 id="Redis常用数据类型"><a href="#Redis常用数据类型" class="headerlink" title="Redis常用数据类型"></a>Redis常用数据类型</h4><p>字符串、哈希、列表、集合、有序集合</p>
 <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ul>
 <li><strong>string</strong>: set get mset mget del incr decr append strlen setrange getrange</li>
 <li><strong>hash</strong>: hset hget hmset hmget hdel hgetall hexists hkeys hvalues hsetnx hincrby hstrlen</li>
@@ -400,9 +390,9 @@
 <li><strong>过期时间</strong>: expire expireat pexpire pexpireat ttl pttl persist</li>
 <li><strong>迁移</strong>: move dump+restore migrate</li>
 <li><strong>遍历键</strong>: keys scan</li>
-<li><strong>数据库</strong>: select flushdb flushall</li>
+<li><strong>数据库</strong>: select flushdb flushall<a id="more"></a>
+</li>
 </ul>
-<a id="more"></a>
 <h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
 <li>scan命令可以解决keys命令可能带来的阻塞问题；</li>
 <li>set命令会删除字符串类型键的过期时间；</li>
