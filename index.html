@@ -1399,10 +1399,18 @@
 
       
         
-          
-            <h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p>最后: 特别感谢<strong>陈蕾</strong>同学的细心指导！</p>
-
-          
+          <h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><h5 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h5><p><strong>概念</strong>：<br>AOP 面向切面编程，把多个业务模块的公共行为封装成一个可重用的模块，通过动态代理的方式让业务模块具备这些功能；增加代码复用率，降低代码耦合度。<br><strong>应用</strong>：日志模块、事务管理、全权限管理等<br><strong>实现原理</strong>：<br>动态代理 (Java反射机制)<br>动态代理的实现方法：实现InvocationHandler接口，重写invoke方法；在Invoke方法里写增强处理的逻辑，这个公共代理类在运行的时候才能明确自己要代理的对象，同时可以实现该被代理类的方法的实现，然后在实现类方法的时候可以进行增强处理。<br><strong>实现的方式</strong>：</p>
+<ul>
+<li>通过注解 @Aspect定义切面 @Before/@After/@Around(表达式) 在切入方法执行前后插入功能</li>
+<li>通过Spring的API实现AOP</li>
+<li>自定义类来实现AOP，不实现spring的自带的通知<br><strong>用到的Jar包</strong>：<br>spring-aop.jar aopalliance.jar aspectsweaver.jar spring-aspects.jar
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/21/mianshi-spring/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
