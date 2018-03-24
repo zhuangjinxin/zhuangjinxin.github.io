@@ -1108,18 +1108,7 @@
         
           <h4 id="为什么Redis性能高？"><a href="#为什么Redis性能高？" class="headerlink" title="为什么Redis性能高？"></a>为什么Redis性能高？</h4><p>纯内存存储、I/O多路复用、单线程架构</p>
 <h4 id="Redis常用数据类型"><a href="#Redis常用数据类型" class="headerlink" title="Redis常用数据类型"></a>Redis常用数据类型</h4><p>字符串、哈希、列表、集合、有序集合</p>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ul>
-<li><strong>string</strong>: set get mset mget del incr decr append strlen setrange getrange</li>
-<li><strong>hash</strong>: hset hget hmset hmget hdel hgetall hexists hkeys hvalues hsetnx hincrby hstrlen</li>
-<li><strong>list</strong>: lpush rpush lpop rpop blpop brpop lrange lindex llen lset</li>
-<li><strong>set</strong>: sadd srem scard smermbers sismember srandmember spop|sinter sunion sdiff</li>
-<li><strong>zset</strong>: zadd zrem zcard zincrby zrank zrevrank zrange zrangebyscore zinterstore zunionstore</li>
-<li><strong>发布订阅</strong>: publish subscribe unsubscribe psubscribe pubsub</li>
-<li><strong>键管理</strong>: type object exists dbsize rename renamenx randomkey</li>
-<li><strong>过期时间</strong>: expire expireat pexpire pexpireat ttl pttl persist</li>
-<li><strong>迁移</strong>: move dump+restore migrate</li>
-<li><strong>遍历键</strong>: keys scan</li>
-<li><strong>数据库</strong>: select flushdb flushall
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p><strong>string</strong>: set get mset mget del incr decr append strlen setrange getrange<br><strong>hash</strong>: hset hget hmset hmget hdel hgetall hexists hkeys hvalues hsetnx hincrby hstrlen<br><strong>list</strong>: lpush rpush lpop rpop blpop brpop lrange lindex llen lset<br><strong>set</strong>: sadd srem scard smermbers sismember srandmember spop|sinter sunion sdiff<br><strong>zset</strong>: zadd zrem zcard zincrby zrank zrevrank zrange zrangebyscore zinterstore zunionstore<br><strong>发布订阅</strong>: publish subscribe unsubscribe psubscribe pubsub<br><strong>键管理</strong>: type object exists dbsize rename renamenx randomkey<br><strong>过期时间</strong>: expire expireat pexpire pexpireat ttl pttl persist<br><strong>迁移</strong>: move dump+restore migrate<br><strong>遍历键</strong>: keys scan<br><strong>数据库</strong>: select flushdb flushall<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/21/mianshi-redis/#more" rel="contents">
