@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="经典排序算法快速排序冒泡排序选择排序插入排序归并排序希尔排序堆排序参考文章 博客: 伍翀">
+<meta name="description" content="经典排序算法常见的排序算法：快速排序、冒泡排序、选择排序、插入排序、归并排序、希尔排序、堆排序 快速排序12345678910111213141516171819```##### 冒泡排序##### 选择排序##### 插入排序```javapublic void sort(int[] a)&amp;#123;    int n = a.length;        for (int i = 0; i &amp;">
 <meta name="keywords" content="原创,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试汇总:《算法》">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-algorithms/index.html">
 <meta property="og:site_name" content="JINXIN">
-<meta property="og:description" content="经典排序算法快速排序冒泡排序选择排序插入排序归并排序希尔排序堆排序参考文章 博客: 伍翀">
+<meta property="og:description" content="经典排序算法常见的排序算法：快速排序、冒泡排序、选择排序、插入排序、归并排序、希尔排序、堆排序 快速排序12345678910111213141516171819```##### 冒泡排序##### 选择排序##### 插入排序```javapublic void sort(int[] a)&amp;#123;    int n = a.length;        for (int i = 0; i &amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-23T07:58:35.729Z">
+<meta property="og:updated_time" content="2018-03-24T16:21:47.371Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《算法》">
-<meta name="twitter:description" content="经典排序算法快速排序冒泡排序选择排序插入排序归并排序希尔排序堆排序参考文章 博客: 伍翀">
+<meta name="twitter:description" content="经典排序算法常见的排序算法：快速排序、冒泡排序、选择排序、插入排序、归并排序、希尔排序、堆排序 快速排序12345678910111213141516171819```##### 冒泡排序##### 选择排序##### 插入排序```javapublic void sort(int[] a)&amp;#123;    int n = a.length;        for (int i = 0; i &amp;">
 
 
 
@@ -377,7 +377,9 @@
       
 
       
-        <h4 id="经典排序算法"><a href="#经典排序算法" class="headerlink" title="经典排序算法"></a>经典排序算法</h4><h5 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h5><h5 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h5><h5 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h5><h5 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h5><h5 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h5><h5 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h5><h5 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h5><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ul>
+        <h4 id="经典排序算法"><a href="#经典排序算法" class="headerlink" title="经典排序算法"></a>经典排序算法</h4><p>常见的排序算法：快速排序、冒泡排序、选择排序、插入排序、归并排序、希尔排序、堆排序</p>
+<h5 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">##### 冒泡排序</span><br><span class="line">##### 选择排序</span><br><span class="line">##### 插入排序</span><br><span class="line">```java</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] a)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n = a.length;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++ )&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">1</span>;j&lt; n-i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (a[j-<span class="number">1</span>] &gt; a[j]) &#123;</span><br><span class="line">                <span class="keyword">int</span> temp = a[j-<span class="number">1</span>];</span><br><span class="line">                a[j-<span class="number">1</span>]=a[j];</span><br><span class="line">                a[j]=temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h5><h5 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h5><h5 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h5><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ul>
 <li>博客: <a href="http://wuchong.me/" target="_blank" rel="noopener">伍翀</a>  </li>
 </ul>
 
@@ -576,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#经典排序算法"><span class="nav-number">1.</span> <span class="nav-text">经典排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#快速排序"><span class="nav-number">1.1.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.2.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#选择排序"><span class="nav-number">1.3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#插入排序"><span class="nav-number">1.4.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#归并排序"><span class="nav-number">1.5.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#希尔排序"><span class="nav-number">1.6.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#堆排序"><span class="nav-number">1.7.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章"><span class="nav-number">2.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#经典排序算法"><span class="nav-number">1.</span> <span class="nav-text">经典排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#快速排序"><span class="nav-number">1.1.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#归并排序"><span class="nav-number">1.2.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#希尔排序"><span class="nav-number">1.3.</span> <span class="nav-text">希尔排序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#堆排序"><span class="nav-number">1.4.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章"><span class="nav-number">2.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
