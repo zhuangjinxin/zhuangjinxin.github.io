@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JINXIN">
 <meta property="og:description" content="为什么Redis性能高？纯内存存储、I/O多路复用、单线程架构 Redis常用数据类型字符串、哈希、列表、集合、有序集合 常用命令string: set get mset mget del incr decr append strlen setrange getrangehash: hset hget hmset hmget hdel hgetall hexists hkeys hvalues h">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T08:15:19.973Z">
+<meta property="og:updated_time" content="2018-03-27T08:22:38.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《Redis》">
 <meta name="twitter:description" content="为什么Redis性能高？纯内存存储、I/O多路复用、单线程架构 Redis常用数据类型字符串、哈希、列表、集合、有序集合 常用命令string: set get mset mget del incr decr append strlen setrange getrangehash: hset hget hmset hmget hdel hgetall hexists hkeys hvalues h">
@@ -396,15 +396,9 @@
 <li>实现排行榜/点赞数：sortedset</li>
 <li>实现延迟队列: sortedset（score时间戳）</li>
 </ul>
-<h4 id="Redis持久化机制"><a href="#Redis持久化机制" class="headerlink" title="Redis持久化机制"></a>Redis持久化机制</h4><ul>
-<li>RDB fork操作创建子进程把内存中的数据以快照的方式写入二进制文件中 dump.rdb</li>
-<li>AOF 把每一个收到的写命令都通过write函数追加到文件中（appendonly.aof）,bgrewriteaof压缩aof的持久化文件</li>
-</ul>
-<h4 id="Redis启动过程"><a href="#Redis启动过程" class="headerlink" title="Redis启动过程"></a>Redis启动过程</h4><h4 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h4><ul>
-<li>作用：读写分离、故障转移、实时备份</li>
-<li>拓扑结构：一主一从、一主多从、树状主从</li>
-<li>复制过程<br>  1.从节点保存主节点信息<br>  2.主从建立socket连接<br>  3.从节点发送ping命令<br>  4.权限认证<br>  5.同步数据集<br>  6.命令持续复制</li>
-</ul>
+<h4 id="Redis持久化机制"><a href="#Redis持久化机制" class="headerlink" title="Redis持久化机制"></a>Redis持久化机制</h4><p>Redis支持RDB和AOF两种持久化机制，持久化可以避免因进程退出造成数据的丢失问题，当下次重启时利用持久化的文件即可实现数据恢复。</p>
+<p><strong>RDB</strong>：fork操作创建子进程把内存中的数据以快照的方式写入二进制文件中 dump.rdb<br><strong>AOF</strong>：把每一个收到的写命令都通过write函数追加到文件中（appendonly.aof）,bgrewriteaof压缩aof的持久化文件</p>
+<h4 id="Redis启动过程"><a href="#Redis启动过程" class="headerlink" title="Redis启动过程"></a>Redis启动过程</h4><h4 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h4><p><strong>作用</strong>：读写分离、故障转移、实时备份<br><strong>拓扑结构</strong>：一主一从、一主多从、树状主从<br><strong>复制过程</strong>：<br>1.从节点保存主节点信息<br>2.主从建立socket连接<br>3.从节点发送ping命令<br>4.权限认证<br>5.同步数据集<br>6.命令持续复制</p>
 <p>注：Redis2.8后 支持psync命令，该命令支持断点续传，减少开销。</p>
 <h4 id="Redis集群"><a href="#Redis集群" class="headerlink" title="Redis集群"></a>Redis集群</h4><p>注：Redis从3.0版本，官方开始支持集群(Redis Cluster)。</p>
 <h4 id="数据淘汰策略"><a href="#数据淘汰策略" class="headerlink" title="数据淘汰策略"></a>数据淘汰策略</h4><p><strong>volatile-lru</strong>: 从设置了过期时间的数据中，删除最近最少使用的数据；<br><strong>allkeys-lru</strong>：从全部数据中，删除最近最少使用的数据；<br><strong>volatile-random</strong>：从设置了过期时间的数据中，随机删除一些数据；<br><strong>allkeys-random</strong>：从全部数据中，随机删除一些数据；<br><strong>volatile-ttl</strong>：从设置了过期时间的数据中，删除即将要过期的数据；<br><strong>noeviction</strong>：(默认)不删除任何数据，直接返回错误；</p>
