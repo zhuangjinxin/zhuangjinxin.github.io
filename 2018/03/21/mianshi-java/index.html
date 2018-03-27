@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JINXIN">
 <meta property="og:description" content="集合Java中常用的数据结构List: ArrayList、LinkedListSet: HashSetMap: HashMap、ConcurrentHashMap ArrayList、LinkedListArrayList：基于动态数组实现 默认大小10 扩容1.5倍+1 线程不安全 CopyOnWriteArrayList或VectorLinkedList：基于双向链表实现区别：1.随机访问元">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-23T06:04:41.611Z">
+<meta property="og:updated_time" content="2018-03-27T09:22:58.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《Java》">
 <meta name="twitter:description" content="集合Java中常用的数据结构List: ArrayList、LinkedListSet: HashSetMap: HashMap、ConcurrentHashMap ArrayList、LinkedListArrayList：基于动态数组实现 默认大小10 扩容1.5倍+1 线程不安全 CopyOnWriteArrayList或VectorLinkedList：基于双向链表实现区别：1.随机访问元">
@@ -378,8 +378,7 @@
 
       
         <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="Java中常用的数据结构"><a href="#Java中常用的数据结构" class="headerlink" title="Java中常用的数据结构"></a>Java中常用的数据结构</h3><p><strong>List</strong>: ArrayList、LinkedList<br><strong>Set</strong>: HashSet<br><strong>Map</strong>: HashMap、ConcurrentHashMap</p>
-<h3 id="ArrayList、LinkedList"><a href="#ArrayList、LinkedList" class="headerlink" title="ArrayList、LinkedList"></a>ArrayList、LinkedList</h3><p><strong>ArrayList</strong>：基于动态数组实现 默认大小10 扩容1.5倍+1 线程不安全 CopyOnWriteArrayList或Vector<br><strong>LinkedList</strong>：基于双向链表实现<br><strong>区别</strong>：<br>1.随机访问元素时，ArrayList优于LinkedList；(因为LinkedList要移动指针)<br>2.新增或删除元素时，LinkedList优于ArrayList；(因为ArrayList要移动数据）<br><strong>注意</strong>：Arraylist不能用正向for循环删除元素</p>
-<a id="more"></a>
+<h3 id="ArrayList、LinkedList"><a href="#ArrayList、LinkedList" class="headerlink" title="ArrayList、LinkedList"></a>ArrayList、LinkedList</h3><p><strong>ArrayList</strong>：基于动态数组实现 默认大小10 扩容1.5倍+1 线程不安全 CopyOnWriteArrayList或Vector<br><strong>LinkedList</strong>：基于双向链表实现<br><strong>区别</strong>：<br>1.随机访问元素时，ArrayList优于LinkedList；(因为LinkedList要移动指针)<br>2.新增或删除元素时，LinkedList优于ArrayList；(因为ArrayList要移动数据）<br><strong>注意</strong>：Arraylist不能用正向for循环删除元素<br><a id="more"></a></p>
 <h3 id="HashMap、ConcurrentHashMap、HashTable"><a href="#HashMap、ConcurrentHashMap、HashTable" class="headerlink" title="HashMap、ConcurrentHashMap、HashTable"></a>HashMap、ConcurrentHashMap、HashTable</h3><h4 id="HashMap："><a href="#HashMap：" class="headerlink" title="HashMap："></a>HashMap：</h4><p>基于数组+链表的方式实现</p>
 <h5 id="初始化与扩容机制"><a href="#初始化与扩容机制" class="headerlink" title="初始化与扩容机制"></a>初始化与扩容机制</h5><p>初始化默认大小为16，扩容因子(加载因子)为0.75；当map中存储数据的容量大于当前map的容量乘以加载因子时，把map容量扩大1倍。</p>
 <h5 id="put和get操作的大致流程"><a href="#put和get操作的大致流程" class="headerlink" title="put和get操作的大致流程"></a>put和get操作的大致流程</h5><p><strong>put</strong>：<br>1.对key进行hashcode操作，计算出index；<br>2.如果没有碰撞，直接放入；<br>3.如果发生碰撞，以链表的形式追加到index元素后链表的末端；<br>4.如果碰过导致链表过长，把链表转化成红黑树；<br>5.如果key已经存在，覆盖掉旧值；<br>6.如果存储数据达到一定个数，则扩容；</p>

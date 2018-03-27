@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="RPCDubboZookeeperNetty参考文章最后: 特别感谢陈蕾同学的细心指导！">
+<meta name="description" content="RPCDubboNettyBIO、NIO、AIOBIO：阻塞式IONIO：非阻塞IOAIO：异步IO NIO的组成Buffer、Selector、Channel TCP拆包/粘包序列化协议Netty零拷贝ZookeeperZookeeper Master选举参考文章最后: 特别感谢陈蕾同学的细心指导！">
 <meta name="keywords" content="原创,RPC,Dubbo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试汇总:《RPC》">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/03/22/mianshi-rpc/index.html">
 <meta property="og:site_name" content="JINXIN">
-<meta property="og:description" content="RPCDubboZookeeperNetty参考文章最后: 特别感谢陈蕾同学的细心指导！">
+<meta property="og:description" content="RPCDubboNettyBIO、NIO、AIOBIO：阻塞式IONIO：非阻塞IOAIO：异步IO NIO的组成Buffer、Selector、Channel TCP拆包/粘包序列化协议Netty零拷贝ZookeeperZookeeper Master选举参考文章最后: 特别感谢陈蕾同学的细心指导！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-22T08:01:57.326Z">
+<meta property="og:updated_time" content="2018-03-27T08:44:32.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《RPC》">
-<meta name="twitter:description" content="RPCDubboZookeeperNetty参考文章最后: 特别感谢陈蕾同学的细心指导！">
+<meta name="twitter:description" content="RPCDubboNettyBIO、NIO、AIOBIO：阻塞式IONIO：非阻塞IOAIO：异步IO NIO的组成Buffer、Selector、Channel TCP拆包/粘包序列化协议Netty零拷贝ZookeeperZookeeper Master选举参考文章最后: 特别感谢陈蕾同学的细心指导！">
 
 
 
@@ -377,7 +377,9 @@
       
 
       
-        <h4 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h4><h4 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h4><h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><h4 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h4><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p>最后: 特别感谢<strong>陈蕾</strong>同学的细心指导！</p>
+        <h4 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h4><h4 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h4><h4 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h4><h5 id="BIO、NIO、AIO"><a href="#BIO、NIO、AIO" class="headerlink" title="BIO、NIO、AIO"></a>BIO、NIO、AIO</h5><p>BIO：阻塞式IO<br>NIO：非阻塞IO<br>AIO：异步IO</p>
+<h5 id="NIO的组成"><a href="#NIO的组成" class="headerlink" title="NIO的组成"></a>NIO的组成</h5><p>Buffer、Selector、Channel</p>
+<h5 id="TCP拆包-粘包"><a href="#TCP拆包-粘包" class="headerlink" title="TCP拆包/粘包"></a>TCP拆包/粘包</h5><h5 id="序列化协议"><a href="#序列化协议" class="headerlink" title="序列化协议"></a>序列化协议</h5><h5 id="Netty零拷贝"><a href="#Netty零拷贝" class="headerlink" title="Netty零拷贝"></a>Netty零拷贝</h5><h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><h5 id="Zookeeper-Master选举"><a href="#Zookeeper-Master选举" class="headerlink" title="Zookeeper Master选举"></a>Zookeeper Master选举</h5><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p>最后: 特别感谢<strong>陈蕾</strong>同学的细心指导！</p>
 
       
     </div>
@@ -576,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#RPC"><span class="nav-number">1.</span> <span class="nav-text">RPC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dubbo"><span class="nav-number">2.</span> <span class="nav-text">Dubbo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Zookeeper"><span class="nav-number">3.</span> <span class="nav-text">Zookeeper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Netty"><span class="nav-number">4.</span> <span class="nav-text">Netty</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章"><span class="nav-number">5.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#RPC"><span class="nav-number">1.</span> <span class="nav-text">RPC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dubbo"><span class="nav-number">2.</span> <span class="nav-text">Dubbo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Netty"><span class="nav-number">3.</span> <span class="nav-text">Netty</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#BIO、NIO、AIO"><span class="nav-number">3.1.</span> <span class="nav-text">BIO、NIO、AIO</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#NIO的组成"><span class="nav-number">3.2.</span> <span class="nav-text">NIO的组成</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TCP拆包-粘包"><span class="nav-number">3.3.</span> <span class="nav-text">TCP拆包/粘包</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#序列化协议"><span class="nav-number">3.4.</span> <span class="nav-text">序列化协议</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Netty零拷贝"><span class="nav-number">3.5.</span> <span class="nav-text">Netty零拷贝</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Zookeeper"><span class="nav-number">4.</span> <span class="nav-text">Zookeeper</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Zookeeper-Master选举"><span class="nav-number">4.1.</span> <span class="nav-text">Zookeeper Master选举</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章"><span class="nav-number">5.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>

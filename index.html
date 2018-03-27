@@ -1262,7 +1262,9 @@
       
         
           
-            <h4 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h4><h4 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h4><h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><h4 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h4><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p>最后: 特别感谢<strong>陈蕾</strong>同学的细心指导！</p>
+            <h4 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h4><h4 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h4><h4 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h4><h5 id="BIO、NIO、AIO"><a href="#BIO、NIO、AIO" class="headerlink" title="BIO、NIO、AIO"></a>BIO、NIO、AIO</h5><p>BIO：阻塞式IO<br>NIO：非阻塞IO<br>AIO：异步IO</p>
+<h5 id="NIO的组成"><a href="#NIO的组成" class="headerlink" title="NIO的组成"></a>NIO的组成</h5><p>Buffer、Selector、Channel</p>
+<h5 id="TCP拆包-粘包"><a href="#TCP拆包-粘包" class="headerlink" title="TCP拆包/粘包"></a>TCP拆包/粘包</h5><h5 id="序列化协议"><a href="#序列化协议" class="headerlink" title="序列化协议"></a>序列化协议</h5><h5 id="Netty零拷贝"><a href="#Netty零拷贝" class="headerlink" title="Netty零拷贝"></a>Netty零拷贝</h5><h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><h5 id="Zookeeper-Master选举"><a href="#Zookeeper-Master选举" class="headerlink" title="Zookeeper Master选举"></a>Zookeeper Master选举</h5><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p>最后: 特别感谢<strong>陈蕾</strong>同学的细心指导！</p>
 
           
         
@@ -1699,7 +1701,7 @@
 
       
         
-          <h4 id="为什么Redis性能高？"><a href="#为什么Redis性能高？" class="headerlink" title="为什么Redis性能高？"></a>为什么Redis性能高？</h4><p>纯内存存储、I/O多路复用、单线程架构</p>
+          <h4 id="为什么Redis性能高？"><a href="#为什么Redis性能高？" class="headerlink" title="为什么Redis性能高？"></a>为什么Redis性能高？</h4><p>纯内存存储、I/O多路复用(epoll)、单线程架构</p>
 <h4 id="Redis常用数据类型"><a href="#Redis常用数据类型" class="headerlink" title="Redis常用数据类型"></a>Redis常用数据类型</h4><p>字符串、哈希、列表、集合、有序集合</p>
 <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p><strong>string</strong>: set get mset mget del incr decr append strlen setrange getrange<br><strong>hash</strong>: hset hget hmset hmget hdel hgetall hexists hkeys hvalues hsetnx hincrby hstrlen<br><strong>list</strong>: lpush rpush lpop rpop blpop brpop lrange lindex llen lset<br><strong>set</strong>: sadd srem scard smermbers sismember srandmember spop|sinter sunion sdiff<br><strong>zset</strong>: zadd zrem zcard zincrby zrank zrevrank zrange zrangebyscore zinterstore zunionstore<br><strong>发布订阅</strong>: publish subscribe unsubscribe psubscribe pubsub<br><strong>键管理</strong>: type object exists dbsize rename renamenx randomkey<br><strong>过期时间</strong>: expire expireat pexpire pexpireat ttl pttl persist<br><strong>迁移</strong>: move dump+restore migrate<br><strong>遍历键</strong>: keys scan<br><strong>数据库</strong>: select flushdb flushall<br>
           <!--noindex-->
