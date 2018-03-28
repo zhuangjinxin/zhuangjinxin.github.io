@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JINXIN">
 <meta property="og:description" content="词频写一个 bash 脚本以计算一个文本文件 words.txt中单词的出现频率。为了简单起见，你可以假设：  words.txt只包括小写字母和&amp;#39;&amp;#39; 。 每个单词只能由小写字母组成。 单词由一个或多个空格字符分隔。  例如，假设words.txt有如下内容：12the day is sunny the thethe sunny is is 你的脚本应当有如下输出，以频率降序排列：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-28T09:05:48.688Z">
+<meta property="og:updated_time" content="2018-03-28T09:25:33.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode Shell">
 <meta name="twitter:description" content="词频写一个 bash 脚本以计算一个文本文件 words.txt中单词的出现频率。为了简单起见，你可以假设：  words.txt只包括小写字母和&amp;#39;&amp;#39; 。 每个单词只能由小写字母组成。 单词由一个或多个空格字符分隔。  例如，假设words.txt有如下内容：12the day is sunny the thethe sunny is is 你的脚本应当有如下输出，以频率降序排列：">
@@ -385,8 +385,7 @@
 </ul>
 <p>例如，假设<code>words.txt</code>有如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">the day is sunny the the</span><br><span class="line">the sunny is is</span><br></pre></td></tr></table></figure></p>
 <p>你的脚本应当有如下输出，以频率降序排列：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">the 4</span><br><span class="line">is 3</span><br><span class="line">sunny 2</span><br><span class="line">day 1</span><br></pre></td></tr></table></figure></p>
-<p>说明:<br>不要担心处理排序，每个词的出现频率是唯一的。</p>
-<p>提示:<br>你可以使用一行 Unix 管道 实现吗？</p>
+<p>说明:<br>不要担心处理排序，每个词的出现频率是唯一的。<br><a id="more"></a><br>提示:<br>你可以使用一行 Unix 管道 实现吗？</p>
 <h4 id="有效电话号码"><a href="#有效电话号码" class="headerlink" title="有效电话号码"></a>有效电话号码</h4><p>给一个文本文件<code>file.txt</code> ，包括了一个电话号码的列表（一行一个），写一个 bash 脚本打印所有有效的电话号码。<br>你可以假定一个有效的电话号码必须以下列两种格式之一出现： (xxx) xxx-xxxx 或者 xxx-xxx-xxxx。（x 表示一个数字）<br>你也可以假定每行前后没有多余的空格。</p>
 <p>例如，假设<code>file.txt</code>包括下面的内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">987-123-4567</span><br><span class="line">123 456 7890</span><br><span class="line">(123) 456-7890</span><br></pre></td></tr></table></figure></p>
 <p>你的脚本应当输出下面这些有效的电话号码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">987-123-4567</span><br><span class="line">(123) 456-7890</span><br></pre></td></tr></table></figure></p>
