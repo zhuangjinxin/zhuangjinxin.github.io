@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="JINXIN">
 <meta property="og:description" content="经典排序算法常见的排序算法：快速排序、冒泡排序、选择排序、插入排序、归并排序、希尔排序、堆排序 快速排序排序思路：1.在待排序的数列中任选一个数作为基准数；2.将待排序的数列分区，小于或等于基准数的元素放在基准数的左边，大于基准数的放在基准数的右边；3.对左右两个分区分别重复以上步骤，直到整个数列有序； 代码示例：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-25T12:12:40.742Z">
+<meta property="og:updated_time" content="2018-03-28T12:22:39.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试汇总:《算法》">
 <meta name="twitter:description" content="经典排序算法常见的排序算法：快速排序、冒泡排序、选择排序、插入排序、归并排序、希尔排序、堆排序 快速排序排序思路：1.在待排序的数列中任选一个数作为基准数；2.将待排序的数列分区，小于或等于基准数的元素放在基准数的左边，大于基准数的放在基准数的右边；3.对左右两个分区分别重复以上步骤，直到整个数列有序； 代码示例：">
@@ -395,7 +395,84 @@
 <p>注：如何合并两个有序数组(从小到大)？<br>1.取两个有序数组的第一个元素进行比较，把较小的元素取出来放到已排序数组的起始位置，并从原数组中删除该元素。<br>2.再从剩余的两个有序数列中取第一个元素，选出较小的元素放在已排序数组的末尾，并从原数组中删除该元素；<br>3.直到其中一个有序数组中没有任何元素，将另一个有序数组的元素依次添加搭配已排序数组的末尾；</p>
 <h5 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h5><p>排序思路：<br>将待排序的数组按下标的一定增量进行分组，对每组进行插入排序；随着增量的减小，每组的元素越多；直到增量减到1时，所有元素分到一组，排序完成；</p>
 <h5 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h5><p>排序思路：<br>1.把待排序的数列依次放入完全二叉树中，构建大顶堆；<br>2.将堆顶元素与末尾元素交换，然后调整堆；依此类推，直到整个数列有序；</p>
-<h5 id="排序算法比较"><a href="#排序算法比较" class="headerlink" title="排序算法比较"></a>排序算法比较</h5><p>时间复杂度：<br>空间复杂度：</p>
+<h5 id="排序算法比较"><a href="#排序算法比较" class="headerlink" title="排序算法比较"></a>排序算法比较</h5><table>
+<thead>
+<tr>
+<th>排序算法</th>
+<th>时间复杂度(平均)</th>
+<th>时间复杂度(最好)</th>
+<th>时间复杂度(最坏)</th>
+<th>空间复杂度</th>
+<th>稳定性</th>
+<th>复杂性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>快速排序</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>不稳定</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>冒泡排序</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>不稳定</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>选择排序</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(1)</td>
+<td>不稳定</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>插入排序</td>
+<td>O(n<sup>2<sup>)</sup></sup></td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>稳定</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>归并排序</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(n)</td>
+<td>稳定</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(n<sup>2</sup>)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>不稳定</td>
+<td>较复杂</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(nlog<sub>2</sub>n)</td>
+<td>O(1)</td>
+<td>不稳定</td>
+<td>较复杂</td>
+</tr>
+</tbody>
+</table>
 <h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><ul>
 <li>博客: <a href="http://wuchong.me/blog/2014/02/09/algorithm-sort-summary" target="_blank" rel="noopener">伍翀</a>  </li>
 </ul>
