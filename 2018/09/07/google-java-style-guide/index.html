@@ -81,14 +81,14 @@
 
 <meta name="description" content="Google Java Style Guide1 IntroductionThis document serves as the complete definition of Google’s coding standards for source code in the Java™ Programming Language. A Java source file is described as">
 <meta property="og:type" content="article">
-<meta property="og:title" content="google-java-style-guide">
+<meta property="og:title" content="Google Java Style Guide">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/09/07/google-java-style-guide/index.html">
 <meta property="og:site_name" content="JINXIN">
 <meta property="og:description" content="Google Java Style Guide1 IntroductionThis document serves as the complete definition of Google’s coding standards for source code in the Java™ Programming Language. A Java source file is described as">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-07T15:34:21.873Z">
+<meta property="og:updated_time" content="2018-09-07T15:35:53.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="google-java-style-guide">
+<meta name="twitter:title" content="Google Java Style Guide">
 <meta name="twitter:description" content="Google Java Style Guide1 IntroductionThis document serves as the complete definition of Google’s coding standards for source code in the Java™ Programming Language. A Java source file is described as">
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>google-java-style-guide | JINXIN</title>
+  <title>Google Java Style Guide | JINXIN</title>
   
 
 
@@ -299,7 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">google-java-style-guide</h1>
+          <h1 class="post-title" itemprop="name headline">Google Java Style Guide</h1>
         
 
         <div class="post-meta">
@@ -364,6 +364,18 @@
 </ol>
 <p>Other “terminology notes” will appear occasionally throughout the document.</p>
 <h4 id="1-2-Guide-notes"><a href="#1-2-Guide-notes" class="headerlink" title="1.2 Guide notes"></a>1.2 Guide notes</h4><p>Example code in this document is <strong>non-normative</strong>. That is, while the examples are in Google Style, they may not illustrate the only stylish way to represent the code. Optional formatting choices made in examples should not be enforced as rules.</p>
+<h3 id="2-Source-file-basics"><a href="#2-Source-file-basics" class="headerlink" title="2 Source file basics"></a>2 Source file basics</h3><p>2.1 File name<br>The source file name consists of the case-sensitive name of the top-level class it contains (of which there is exactly one), plus the <code>.java</code> extension.</p>
+<h4 id="2-2-File-encoding-UTF-8"><a href="#2-2-File-encoding-UTF-8" class="headerlink" title="2.2 File encoding: UTF-8"></a>2.2 File encoding: UTF-8</h4><p>Source files are encoded in <strong>UTF-8</strong>.</p>
+<h4 id="2-3-Special-characters"><a href="#2-3-Special-characters" class="headerlink" title="2.3 Special characters"></a>2.3 Special characters</h4><h5 id="2-3-1-Whitespace-characters"><a href="#2-3-1-Whitespace-characters" class="headerlink" title="2.3.1 Whitespace characters"></a>2.3.1 Whitespace characters</h5><p>Aside from the line terminator sequence, the <strong>ASCII horizontal space character (0x20)</strong> is the only whitespace character that appears anywhere in a source file. This implies that:</p>
+<ol>
+<li>All other whitespace characters in string and character literals are escaped.</li>
+<li>Tab characters are not used for indentation.</li>
+</ol>
+<h5 id="2-3-2-Special-escape-sequences"><a href="#2-3-2-Special-escape-sequences" class="headerlink" title="2.3.2 Special escape sequences"></a>2.3.2 Special escape sequences</h5><p>For any character that has a special escape sequence (<code>\b</code>, <code>\t</code>, <code>\n</code>, <code>\f</code>, <code>\r</code>, <code>\&quot;</code>, <code>\&#39;</code> and <code>\\</code>), that sequence is used rather than the corresponding octal (e.g. <code>\012</code>) or Unicode (e.g. <code>\u000a</code>) escape.</p>
+<h5 id="2-3-3-Non-ASCII-characters"><a href="#2-3-3-Non-ASCII-characters" class="headerlink" title="2.3.3 Non-ASCII characters"></a>2.3.3 Non-ASCII characters</h5><p>For the remaining non-ASCII characters, either the actual Unicode character (e.g. <code>∞</code>) or the equivalent Unicode escape (e.g. <code>\u221e</code>) is used. The choice depends only on which makes the code <strong>easier to read and understand</strong>, although Unicode escapes outside string literals and comments are strongly discouraged.</p>
+<blockquote>
+<p><strong>Tip</strong>: In the Unicode escape case, and occasionally even when actual Unicode characters are used, an explanatory comment can be very helpful.</p>
+</blockquote>
 
       
     </div>
@@ -548,7 +560,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Java-Style-Guide"><span class="nav-number">1.</span> <span class="nav-text">Google Java Style Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">1 Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Terminology-notes"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 Terminology notes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Guide-notes"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 Guide notes</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Java-Style-Guide"><span class="nav-number">1.</span> <span class="nav-text">Google Java Style Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">1 Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Terminology-notes"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 Terminology notes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-Guide-notes"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2 Guide notes</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Source-file-basics"><span class="nav-number">1.2.</span> <span class="nav-text">2 Source file basics</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-File-encoding-UTF-8"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.2 File encoding: UTF-8</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-Special-characters"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.3 Special characters</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-1-Whitespace-characters"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">2.3.1 Whitespace characters</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-2-Special-escape-sequences"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">2.3.2 Special escape sequences</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-3-Non-ASCII-characters"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">2.3.3 Non-ASCII characters</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
