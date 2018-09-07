@@ -466,6 +466,44 @@
 <blockquote>
 <p><strong>Tip</strong>: Extracting a method or local variable may solve the problem without the need to line-wrap.</p>
 </blockquote>
+<h5 id="4-5-1-Where-to-break"><a href="#4-5-1-Where-to-break" class="headerlink" title="4.5.1 Where to break"></a>4.5.1 Where to break</h5><p>The prime directive of line-wrapping is: prefer to break at a <strong>higher syntactic level</strong>. Also:</p>
+<ol>
+<li>When a line is broken at a non-assignment operator the break comes before the symbol. (Note that this is not the same practice used in Google style for other languages, such as C++ and JavaScript.)<ul>
+<li>This also applies to the following “operator-like” symbols:<ul>
+<li>the dot separator (<code>.</code>)</li>
+<li>the two colons of a method reference (<code>::</code>)</li>
+<li>an ampersand in a type bound (<code>&lt;T extends Foo &amp; Bar&gt;</code>)</li>
+<li>a pipe in a catch block (<code>catch (FooException | BarException e)</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>When a line is broken at an assignment operator the break typically comes after the symbol, but either way is acceptable.<ul>
+<li>This also applies to the “assignment-operator-like” colon in an enhanced <code>for</code> (“foreach”) statement.</li>
+</ul>
+</li>
+<li>A method or constructor name stays attached to the open parenthesis (<code>(</code>) that follows it.</li>
+<li>A comma (<code>,</code>) stays attached to the token that precedes it.</li>
+<li>A line is never broken adjacent to the arrow in a lambda, except that a break may come immediately after the arrow if the body of the lambda consists of a single unbraced expression. Examples:</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">MyLambda&lt;String, Long, Object&gt; lambda =</span><br><span class="line">    (String label, Long value, Object obj) -&gt; &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">Predicate&lt;String&gt; predicate = str -&gt;</span><br><span class="line">    longExpressionInvolving(str);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Note: The primary goal for line wrapping is to have clear code, not necessarily code that fits in the smallest number of lines.</p>
+</blockquote>
+<h5 id="4-5-2-Indent-continuation-lines-at-least-4-spaces"><a href="#4-5-2-Indent-continuation-lines-at-least-4-spaces" class="headerlink" title="4.5.2 Indent continuation lines at least +4 spaces"></a>4.5.2 Indent continuation lines at least +4 spaces</h5><p>When line-wrapping, each line after the first (each continuation line) is indented at least +4 from the original line.</p>
+<p>When there are multiple continuation lines, indentation may be varied beyond +4 as desired. In general, two continuation lines use the same indentation level if and only if they begin with syntactically parallel elements.</p>
+<p>Section 4.6.3 on Horizontal alignment addresses the discouraged practice of using a variable number of spaces to align certain tokens with previous lines.</p>
+<h4 id="4-6-Whitespace"><a href="#4-6-Whitespace" class="headerlink" title="4.6 Whitespace"></a>4.6 Whitespace</h4><h5 id="4-6-1-Vertical-Whitespace"><a href="#4-6-1-Vertical-Whitespace" class="headerlink" title="4.6.1 Vertical Whitespace"></a>4.6.1 Vertical Whitespace</h5><p>A single blank line always appears:</p>
+<ol>
+<li>Between consecutive members or initializers of a class: fields, constructors, methods, nested classes, static initializers, and instance initializers.<ul>
+<li>Exception: A blank line between two consecutive fields (having no other code between them) is optional. Such blank lines are used as needed to create logical groupings of fields.</li>
+<li>Exception: Blank lines between enum constants are covered in Section 4.8.1.</li>
+</ul>
+</li>
+<li>As required by other sections of this document (such as Section 3, Source file structure, and Section 3.3, Import statements).</li>
+</ol>
+<p>A single blank line may also appear anywhere it improves readability, for example between statements to organize the code into logical subsections. A blank line before the first member or initializer, or after the last member or initializer of the class, is neither encouraged nor discouraged.</p>
+<p>Multiple consecutive blank lines are permitted, but never required (or encouraged).</p>
 
           
         
