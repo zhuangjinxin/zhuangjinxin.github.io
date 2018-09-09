@@ -282,6 +282,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.zhuangjinxin.top/2018/09/09/ganji-mysql-regulations/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZHUANG JINXIN">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JINXIN">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/09/ganji-mysql-regulations/" itemprop="url">赶集网MySQL军规</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T09:05:55+08:00">
+                2018-09-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/style/" itemprop="url" rel="index">
+                    <span itemprop="name">编码规范</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="一、核心军规"><a href="#一、核心军规" class="headerlink" title="一、核心军规"></a>一、核心军规</h3><ul>
+<li>不在数据库做计算，CPU计算务必移至业务层</li>
+<li>控制单表数据量，单表记录控制在千万级</li>
+<li>控制列数量，字段数控制在20以内</li>
+<li>平衡范式与冗余，为提高效率可以牺牲范式设计，冗余数据</li>
+<li>拒绝3B(big)，大sql，大事务，大批量
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/09/ganji-mysql-regulations/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.zhuangjinxin.top/2018/09/09/58-daojia-mysql-regulations/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -374,71 +525,20 @@
 
       
         
-          
-            <h3 id="一、基础规范"><a href="#一、基础规范" class="headerlink" title="一、基础规范"></a>一、基础规范</h3><ul>
+          <h3 id="一、基础规范"><a href="#一、基础规范" class="headerlink" title="一、基础规范"></a>一、基础规范</h3><ul>
 <li>表存储引擎必须使用InnoDB</li>
 <li>表字符集默认使用utf8，必要时候使用utf8mb4</li>
 <li>禁止使用存储过程，视图，触发器，Event</li>
 <li>禁止在数据库中存储大文件，例如照片，可以将大文件存储在对象存储系统，数据库中存储路径</li>
 <li>禁止在线上环境做数据库压力测试</li>
-<li>测试，开发，线上数据库环境必须隔离</li>
-</ul>
-<h3 id="二、命名规范"><a href="#二、命名规范" class="headerlink" title="二、命名规范"></a>二、命名规范</h3><ul>
-<li>库名，表名，列名必须用小写，采用下划线分隔</li>
-<li>库名，表名，列名必须见名知义，长度不要超过32字符</li>
-<li>库备份必须以bak为前缀，以日期为后缀</li>
-<li>从库必须以-s为后缀</li>
-<li>备库必须以-ss为后缀</li>
-</ul>
-<h3 id="三、表设计规范"><a href="#三、表设计规范" class="headerlink" title="三、表设计规范"></a>三、表设计规范</h3><ul>
-<li>单实例表个数必须控制在2000个以内</li>
-<li>单表分表个数必须控制在1024个以内</li>
-<li>表必须有主键，推荐使用UNSIGNED整数为主键(删除无主键的表，如果是row模式的主从架构，从库会挂住)</li>
-<li>禁止使用外键，如果要保证完整性，应由应用程序实现</li>
-<li>建议将大字段，访问频度低的字段拆分到单独的表中存储，分离冷热数据</li>
-</ul>
-<h3 id="四、列设计规范"><a href="#四、列设计规范" class="headerlink" title="四、列设计规范"></a>四、列设计规范</h3><ul>
-<li>根据业务区分使用tinyint/int/bigint，分别会占用1/4/8字节</li>
-<li>根据业务区分使用char/varchar</li>
-<li>根据业务区分使用datetime/timestamp</li>
-<li>必须把字段定义为NOT NULL并设默认值</li>
-<li>使用INT UNSIGNED存储IPv4，不要用char(15)</li>
-<li>使用varchar(20)存储手机号，不要使用整数</li>
-<li>使用TINYINT来代替ENUM</li>
-</ul>
-<h3 id="五、索引规范"><a href="#五、索引规范" class="headerlink" title="五、索引规范"></a>五、索引规范</h3><ul>
-<li>唯一索引使用uniq_[字段名]来命名</li>
-<li>非唯一索引使用idx_[字段名]来命名</li>
-<li>单张表索引数量建议控制在5个以内</li>
-<li>组合索引字段数不建议超过5个</li>
-<li>不建议在频繁更新的字段上建立索引</li>
-<li>非必要不要进行JOIN查询，如果要进行JOIN查询，被JOIN的字段必须类型相同，并建立索引</li>
-<li>理解组合索引最左前缀原则，避免重复建设索引，如果建立了(a,b,c)，相当于建立了(a), (a,b), (a,b,c)</li>
-</ul>
-<h3 id="六、SQL规范"><a href="#六、SQL规范" class="headerlink" title="六、SQL规范"></a>六、SQL规范</h3><ul>
-<li>禁止使用<code>select *</code>，只获取必要字段</li>
-<li>insert必须指定字段，禁止使用insert into T values()</li>
-<li>隐式类型转换会使索引失效，导致全表扫描</li>
-<li>禁止在where条件列使用函数或者表达式</li>
-<li>禁止负向查询以及%开头的模糊查询</li>
-<li>禁止大表JOIN和子查询</li>
-<li>同一个字段上的OR必须改写问IN，IN的值必须少于50个</li>
-<li>应用程序必须捕获SQL异常</li>
-</ul>
-<h3 id="七、行为规范"><a href="#七、行为规范" class="headerlink" title="七、行为规范"></a>七、行为规范</h3><ul>
-<li>禁止使用应用程序配置文件内的帐号手工访问线上数据库</li>
-<li>禁止非DBA对线上数据库进行写操作，修改线上数据需要提交工单，由DBA执行，提交的SQL语句必须经过测试</li>
-<li>分配非DBA以只读帐号，必须通过VPN+跳板机访问授权的从库</li>
-<li>开发、测试、线上环境隔离</li>
-</ul>
-<p>说明：本军规适用于并发量大，数据量大的典型互联网业务。</p>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
-<li>链接：<a href="https://mp.weixin.qq.com/s/Yjh_fPgrjuhhOZyVtRQ-SA" target="_blank" rel="noopener">58到家数据库30条军规解读</a></li>
-<li>链接：<a href="https://mp.weixin.qq.com/s/8LHNXdpRcn_ehIdb8Q4EvA" target="_blank" rel="noopener">再议数据库军规</a></li>
-<li>链接：<a href="https://mp.weixin.qq.com/s/YfCORbcCX1hymXBCrZbAZg" target="_blank" rel="noopener">58到家MySQL军规升级版</a></li>
-</ul>
-
-          
+<li>测试，开发，线上数据库环境必须隔离
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/09/58-daojia-mysql-regulations/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2106,150 +2206,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.zhuangjinxin.top/2018/03/22/mianshi-rpc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JINXIN">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/22/mianshi-rpc/" itemprop="url">面试汇总:《RPC》</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T15:53:27+08:00">
-                2018-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h4><h4 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h4><h4 id="Netty"><a href="#Netty" class="headerlink" title="Netty"></a>Netty</h4><h5 id="BIO、NIO、AIO"><a href="#BIO、NIO、AIO" class="headerlink" title="BIO、NIO、AIO"></a>BIO、NIO、AIO</h5><p>BIO：阻塞式IO<br>NIO：非阻塞IO<br>AIO：异步IO</p>
-<h5 id="NIO的组成"><a href="#NIO的组成" class="headerlink" title="NIO的组成"></a>NIO的组成</h5><p>Buffer、Selector、Channel</p>
-<h5 id="TCP拆包-粘包"><a href="#TCP拆包-粘包" class="headerlink" title="TCP拆包/粘包"></a>TCP拆包/粘包</h5><h5 id="序列化协议"><a href="#序列化协议" class="headerlink" title="序列化协议"></a>序列化协议</h5><h5 id="Netty零拷贝"><a href="#Netty零拷贝" class="headerlink" title="Netty零拷贝"></a>Netty零拷贝</h5><h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><h5 id="Zookeeper-Master选举"><a href="#Zookeeper-Master选举" class="headerlink" title="Zookeeper Master选举"></a>Zookeeper Master选举</h5><h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p>最后: 特别感谢<strong>陈蕾</strong>同学的细心指导！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2304,7 +2260,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
