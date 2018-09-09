@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4  解读：（1）通用，无乱码风险，汉字3字节，英文1字节（2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它   禁止使用存储过程，视图，触发器，Event  解读：（1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层（2）调试，排错，迁移都比较困难">
+<meta name="description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4 禁止使用存储过程，视图，触发器，Event 禁止在数据库中存储大文件，例如照片，可以将大文件存储在对象存储系统，数据库中存储路径 禁止在线上环境做数据库压力测试 测试，开发，线上数据库环境必须隔离  二、命名规范 库名，表名，列名必须用小写，采用下划线分隔 库名，表名，列名必须见名知义，长度不要超过">
 <meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="58到家MySQL军规">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/09/09/58-daojia-mysql-regulations/index.html">
 <meta property="og:site_name" content="JINXIN">
-<meta property="og:description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4  解读：（1）通用，无乱码风险，汉字3字节，英文1字节（2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它   禁止使用存储过程，视图，触发器，Event  解读：（1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层（2）调试，排错，迁移都比较困难">
+<meta property="og:description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4 禁止使用存储过程，视图，触发器，Event 禁止在数据库中存储大文件，例如照片，可以将大文件存储在对象存储系统，数据库中存储路径 禁止在线上环境做数据库压力测试 测试，开发，线上数据库环境必须隔离  二、命名规范 库名，表名，列名必须用小写，采用下划线分隔 库名，表名，列名必须见名知义，长度不要超过">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-09T00:30:17.308Z">
+<meta property="og:updated_time" content="2018-09-09T00:37:24.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="58到家MySQL军规">
-<meta name="twitter:description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4  解读：（1）通用，无乱码风险，汉字3字节，英文1字节（2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它   禁止使用存储过程，视图，触发器，Event  解读：（1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层（2）调试，排错，迁移都比较困难">
+<meta name="twitter:description" content="一、基础规范 表存储引擎必须使用InnoDB 表字符集默认使用utf8，必要时候使用utf8mb4 禁止使用存储过程，视图，触发器，Event 禁止在数据库中存储大文件，例如照片，可以将大文件存储在对象存储系统，数据库中存储路径 禁止在线上环境做数据库压力测试 测试，开发，线上数据库环境必须隔离  二、命名规范 库名，表名，列名必须用小写，采用下划线分隔 库名，表名，列名必须见名知义，长度不要超过">
 
 
 
@@ -379,157 +379,59 @@
       
         <h3 id="一、基础规范"><a href="#一、基础规范" class="headerlink" title="一、基础规范"></a>一、基础规范</h3><ul>
 <li>表存储引擎必须使用InnoDB</li>
-<li><p>表字符集默认使用utf8，必要时候使用utf8mb4</p>
-<blockquote>
-<p>解读：<br>（1）通用，无乱码风险，汉字3字节，英文1字节<br>（2）utf8mb4是utf8的超集，有存储4字节例如表情符号时，使用它</p>
-</blockquote>
-</li>
-<li><p>禁止使用存储过程，视图，触发器，Event</p>
-<blockquote>
-<p>解读：<br>（1）对数据库性能影响较大，互联网业务，能让站点层和服务层干的事情，不要交到数据库层<br>（2）调试，排错，迁移都比较困难，扩展性较差</p>
-</blockquote>
-</li>
-<li><p>禁止在数据库中存储大文件，例如照片，可以将大文件存储在对象存储系统，数据库中存储路径</p>
-</li>
-<li><p>禁止在线上环境做数据库压力测试</p>
-</li>
-<li><p>测试，开发，线上数据库环境必须隔离</p>
-</li>
+<li>表字符集默认使用utf8，必要时候使用utf8mb4</li>
+<li>禁止使用存储过程，视图，触发器，Event</li>
+<li>禁止在数据库中存储大文件，例如照片，可以将大文件存储在对象存储系统，数据库中存储路径</li>
+<li>禁止在线上环境做数据库压力测试</li>
+<li>测试，开发，线上数据库环境必须隔离</li>
 </ul>
 <h3 id="二、命名规范"><a href="#二、命名规范" class="headerlink" title="二、命名规范"></a>二、命名规范</h3><ul>
-<li><p>库名，表名，列名必须用小写，采用下划线分隔</p>
-<blockquote>
-<p>解读：abc，Abc，ABC都是给自己埋坑</p>
-</blockquote>
-</li>
-<li><p>库名，表名，列名必须见名知义，长度不要超过32字符</p>
-<blockquote>
-<p>解读：tmp，wushan谁TM知道这些库是干嘛的</p>
-</blockquote>
-</li>
-<li><p>库备份必须以bak为前缀，以日期为后缀</p>
-</li>
-<li><p>从库必须以-s为后缀</p>
-</li>
-<li><p>备库必须以-ss为后缀</p>
-</li>
+<li>库名，表名，列名必须用小写，采用下划线分隔</li>
+<li>库名，表名，列名必须见名知义，长度不要超过32字符</li>
+<li>库备份必须以bak为前缀，以日期为后缀</li>
+<li>从库必须以-s为后缀</li>
+<li>备库必须以-ss为后缀</li>
 </ul>
 <h3 id="三、表设计规范"><a href="#三、表设计规范" class="headerlink" title="三、表设计规范"></a>三、表设计规范</h3><ul>
-<li><p>单实例表个数必须控制在2000个以内</p>
-</li>
-<li><p>单表分表个数必须控制在1024个以内</p>
-</li>
-<li><p>表必须有主键，推荐使用UNSIGNED整数为主键</p>
-<blockquote>
-<p>潜在坑：删除无主键的表，如果是row模式的主从架构，从库会挂住</p>
-</blockquote>
-</li>
-<li><p>禁止使用外键，如果要保证完整性，应由应用程式实现</p>
-<blockquote>
-<p>解读：外键使得表之间相互耦合，影响update/delete等SQL性能，有可能造成死锁，高并发情况下容易成为数据库瓶颈</p>
-</blockquote>
-</li>
-<li><p>建议将大字段，访问频度低的字段拆分到单独的表中存储，分离冷热数据</p>
-</li>
+<li>单实例表个数必须控制在2000个以内</li>
+<li>单表分表个数必须控制在1024个以内</li>
+<li>表必须有主键，推荐使用UNSIGNED整数为主键(删除无主键的表，如果是row模式的主从架构，从库会挂住)</li>
+<li>禁止使用外键，如果要保证完整性，应由应用程序实现</li>
+<li>建议将大字段，访问频度低的字段拆分到单独的表中存储，分离冷热数据</li>
 </ul>
 <h3 id="四、列设计规范"><a href="#四、列设计规范" class="headerlink" title="四、列设计规范"></a>四、列设计规范</h3><ul>
-<li><p>根据业务区分使用tinyint/int/bigint，分别会占用1/4/8字节</p>
-</li>
-<li><p>根据业务区分使用char/varchar</p>
-<blockquote>
-<p>解读：<br>（1）字段长度固定，或者长度近似的业务场景，适合使用char，能够减少碎片，查询性能高<br>（2）字段长度相差较大，或者更新较少的业务场景，适合使用varchar，能够减少空间</p>
-</blockquote>
-</li>
-<li><p>根据业务区分使用datetime/timestamp</p>
-<blockquote>
-<p>解读：前者占用5个字节，后者占用4个字节，存储年使用YEAR，存储日期使用DATE，存储时间使用datetime</p>
-</blockquote>
-</li>
-<li><p>必须把字段定义为NOT NULL并设默认值</p>
-<blockquote>
-<p>解读：<br>（1）NULL的列使用索引，索引统计，值都更加复杂，MySQL更难优化<br>（2）NULL需要更多的存储空间<br>（3）NULL只能采用IS NULL或者IS NOT NULL，而在=/!=/in/not in时有大坑</p>
-</blockquote>
-</li>
-<li><p>使用INT UNSIGNED存储IPv4，不要用char(15)</p>
-</li>
-<li><p>使用varchar(20)存储手机号，不要使用整数</p>
-<blockquote>
-<p>解读：<br>（1）牵扯到国家代号，可能出现+/-/()等字符，例如+86<br>（2）手机号不会用来做数学运算<br>（3）varchar可以模糊查询，例如like ‘138%’</p>
-</blockquote>
-</li>
-<li><p>使用TINYINT来代替ENUM</p>
-<blockquote>
-<p>解读：ENUM增加新值要进行DDL操作</p>
-</blockquote>
-</li>
+<li>根据业务区分使用tinyint/int/bigint，分别会占用1/4/8字节</li>
+<li>根据业务区分使用char/varchar</li>
+<li>根据业务区分使用datetime/timestamp</li>
+<li>必须把字段定义为NOT NULL并设默认值</li>
+<li>使用INT UNSIGNED存储IPv4，不要用char(15)</li>
+<li>使用varchar(20)存储手机号，不要使用整数</li>
+<li>使用TINYINT来代替ENUM</li>
 </ul>
 <h3 id="五、索引规范"><a href="#五、索引规范" class="headerlink" title="五、索引规范"></a>五、索引规范</h3><ul>
-<li><p>唯一索引使用uniq_[字段名]来命名</p>
-</li>
-<li><p>非唯一索引使用idx_[字段名]来命名</p>
-</li>
-<li><p>单张表索引数量建议控制在5个以内</p>
-<blockquote>
-<p>解读：<br>（1）互联网高并发业务，太多索引会影响写性能<br>（2）生成执行计划时，如果索引太多，会降低性能，并可能导致MySQL选择不到最优索引<br>（3）异常复杂的查询需求，可以选择ES等更为适合的方式存储</p>
-</blockquote>
-</li>
-<li><p>组合索引字段数不建议超过5个</p>
-<blockquote>
-<p>解读：如果5个字段还不能极大缩小row范围，八成是设计有问题</p>
-</blockquote>
-</li>
-<li><p>不建议在频繁更新的字段上建立索引</p>
-</li>
-<li><p>非必要不要进行JOIN查询，如果要进行JOIN查询，被JOIN的字段必须类型相同，并建立索引</p>
-<blockquote>
-<p>解读：踩过因为JOIN字段类型不一致，而导致全表扫描的坑么？</p>
-</blockquote>
-</li>
-<li><p>理解组合索引最左前缀原则，避免重复建设索引，如果建立了(a,b,c)，相当于建立了(a), (a,b), (a,b,c)</p>
-</li>
+<li>唯一索引使用uniq_[字段名]来命名</li>
+<li>非唯一索引使用idx_[字段名]来命名</li>
+<li>单张表索引数量建议控制在5个以内</li>
+<li>组合索引字段数不建议超过5个</li>
+<li>不建议在频繁更新的字段上建立索引</li>
+<li>非必要不要进行JOIN查询，如果要进行JOIN查询，被JOIN的字段必须类型相同，并建立索引</li>
+<li>理解组合索引最左前缀原则，避免重复建设索引，如果建立了(a,b,c)，相当于建立了(a), (a,b), (a,b,c)</li>
 </ul>
 <h3 id="六、SQL规范"><a href="#六、SQL规范" class="headerlink" title="六、SQL规范"></a>六、SQL规范</h3><ul>
-<li><p>禁止使用<code>select *</code>，只获取必要字段</p>
-<blockquote>
-<p>解读：（1）<code>select *</code>会增加cpu/io/内存/带宽的消耗<br>（2）指定字段能有效利用索引覆盖<br>（3）指定字段查询，在表结构变更时，能保证对应用程序无影响</p>
-</blockquote>
-</li>
-<li><p>insert必须指定字段，禁止使用insert into T values()</p>
-<blockquote>
-<p>解读：指定字段插入，在表结构变更时，能保证对应用程序无影响</p>
-</blockquote>
-</li>
-<li><p>隐式类型转换会使索引失效，导致全表扫描</p>
-</li>
-<li><p>禁止在where条件列使用函数或者表达式</p>
-<blockquote>
-<p>解读：导致不能命中索引，全表扫描</p>
-</blockquote>
-</li>
-<li><p>禁止负向查询以及%开头的模糊查询</p>
-<blockquote>
-<p>解读：导致不能命中索引，全表扫描</p>
-</blockquote>
-</li>
-<li><p>禁止大表JOIN和子查询</p>
-</li>
-<li><p>同一个字段上的OR必须改写问IN，IN的值必须少于50个</p>
-</li>
-<li><p>应用程序必须捕获SQL异常</p>
-<blockquote>
-<p>解读：方便定位线上问题</p>
-</blockquote>
-</li>
+<li>禁止使用<code>select *</code>，只获取必要字段</li>
+<li>insert必须指定字段，禁止使用insert into T values()</li>
+<li>隐式类型转换会使索引失效，导致全表扫描</li>
+<li>禁止在where条件列使用函数或者表达式</li>
+<li>禁止负向查询以及%开头的模糊查询</li>
+<li>禁止大表JOIN和子查询</li>
+<li>同一个字段上的OR必须改写问IN，IN的值必须少于50个</li>
+<li>应用程序必须捕获SQL异常</li>
 </ul>
-<h3 id="行为规范"><a href="#行为规范" class="headerlink" title="行为规范"></a>行为规范</h3><ul>
-<li><p>禁止使用应用程序配置文件内的帐号手工访问线上数据库</p>
-</li>
-<li><p>禁止非DBA对线上数据库进行写操作，修改线上数据需要提交工单，由DBA执行，提交的SQL语句必须经过测试</p>
-</li>
-<li><p>分配非DBA以只读帐号，必须通过VPN+跳板机访问授权的从库</p>
-</li>
-<li><p>开发、测试、线上环境隔离</p>
-</li>
+<h3 id="七、行为规范"><a href="#七、行为规范" class="headerlink" title="七、行为规范"></a>七、行为规范</h3><ul>
+<li>禁止使用应用程序配置文件内的帐号手工访问线上数据库</li>
+<li>禁止非DBA对线上数据库进行写操作，修改线上数据需要提交工单，由DBA执行，提交的SQL语句必须经过测试</li>
+<li>分配非DBA以只读帐号，必须通过VPN+跳板机访问授权的从库</li>
+<li>开发、测试、线上环境隔离</li>
 </ul>
 <p>说明：本军规适用于并发量大，数据量大的典型互联网业务。</p>
 <h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
@@ -727,7 +629,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、基础规范"><span class="nav-number">1.</span> <span class="nav-text">一、基础规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、命名规范"><span class="nav-number">2.</span> <span class="nav-text">二、命名规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、表设计规范"><span class="nav-number">3.</span> <span class="nav-text">三、表设计规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、列设计规范"><span class="nav-number">4.</span> <span class="nav-text">四、列设计规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、索引规范"><span class="nav-number">5.</span> <span class="nav-text">五、索引规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、SQL规范"><span class="nav-number">6.</span> <span class="nav-text">六、SQL规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行为规范"><span class="nav-number">7.</span> <span class="nav-text">行为规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">8.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、基础规范"><span class="nav-number">1.</span> <span class="nav-text">一、基础规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、命名规范"><span class="nav-number">2.</span> <span class="nav-text">二、命名规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、表设计规范"><span class="nav-number">3.</span> <span class="nav-text">三、表设计规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、列设计规范"><span class="nav-number">4.</span> <span class="nav-text">四、列设计规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、索引规范"><span class="nav-number">5.</span> <span class="nav-text">五、索引规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、SQL规范"><span class="nav-number">6.</span> <span class="nav-text">六、SQL规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七、行为规范"><span class="nav-number">7.</span> <span class="nav-text">七、行为规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">8.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
