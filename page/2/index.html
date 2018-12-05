@@ -657,19 +657,10 @@
       
         
           
-            <h3 id="JDK-下载与安装："><a href="#JDK-下载与安装：" class="headerlink" title="JDK 下载与安装："></a>JDK 下载与安装：</h3><ol>
-<li><p>下载 JDK 安装包<br>JDK Download: <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p>
-</li>
-<li><p>安装 JDK<br>双击 JDK 安装包<code>jdk-8u191-macosx-x64.dmg</code> . 一直默认执行<code>下一步</code>，直至安装完成。</p>
-</li>
-<li><p>配置环境变量</p>
-</li>
-</ol>
-<p>JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home<br>export PATH=$HOME/bin:/usr/local/bin:$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre<br>:wq!<br>source .zshrc</p>
-<ol>
-<li>检查 JDK 版本<br>java -version<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">➜ java -version</span><br><span class="line">java version &quot;1.8.0_191&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_191-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+            <h3 id="JDK-下载与安装："><a href="#JDK-下载与安装：" class="headerlink" title="JDK 下载与安装："></a>JDK 下载与安装：</h3><p>1.下载 JDK 安装包<br>进入 JDK 下载页面: <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/index.html</a><br>勾选 <code>Accept License Agreement</code> , 接受许可协议；<br>点击 <code>jdk-8u191-macosx-x64.dmg</code> 下载 JDK；</p>
+<p>2.安装 JDK<br>双击 JDK 安装包<code>jdk-8u191-macosx-x64.dmg</code> . 一直默认执行<code>下一步</code>，直至安装完成。</p>
+<p>3.配置环境变量<br>在<code>.zshrc</code>或<code>.bash_profile</code>文件中添加如下配置.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">➜ vi .zshrc</span><br><span class="line"># 添加下面两行配置到.zshrc文件中</span><br><span class="line">JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home</span><br><span class="line">export PATH=$HOME/bin:/usr/local/bin:$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre</span><br><span class="line">➜ :wq! #保存退出</span><br><span class="line">➜ source .zshrc</span><br></pre></td></tr></table></figure></p>
+<p>4.检查 JDK 版本<br>执行<code>java -version</code>。若显示如下内容，则JDK安装完成。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">➜ java -version</span><br><span class="line">java version &quot;1.8.0_191&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_191-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)</span><br></pre></td></tr></table></figure></p>
 
           
         
