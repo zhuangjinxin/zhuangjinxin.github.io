@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Make it happen!">
+<meta name="description" content="JDK 下载与安装： 下载 JDK 安装包JDK Download: https://www.oracle.com/technetwork/java/javase/downloads/index.html  安装 JDK双击 JDK 安装包jdk-8u191-macosx-x64.dmg . 一直默认执行下一步，直至安装完成。  配置环境变量   JAVA_HOME=/Library/Java/J">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tools-jdk">
+<meta property="og:title" content="开发工具：JDK">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2018/12/05/tools-jdk/index.html">
 <meta property="og:site_name" content="Xin">
-<meta property="og:description" content="Make it happen!">
+<meta property="og:description" content="JDK 下载与安装： 下载 JDK 安装包JDK Download: https://www.oracle.com/technetwork/java/javase/downloads/index.html  安装 JDK双击 JDK 安装包jdk-8u191-macosx-x64.dmg . 一直默认执行下一步，直至安装完成。  配置环境变量   JAVA_HOME=/Library/Java/J">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-05T13:29:02.795Z">
+<meta property="og:updated_time" content="2018-12-05T14:00:24.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tools-jdk">
-<meta name="twitter:description" content="Make it happen!">
+<meta name="twitter:title" content="开发工具：JDK">
+<meta name="twitter:description" content="JDK 下载与安装： 下载 JDK 安装包JDK Download: https://www.oracle.com/technetwork/java/javase/downloads/index.html  安装 JDK双击 JDK 安装包jdk-8u191-macosx-x64.dmg . 一直默认执行下一步，直至安装完成。  配置环境变量   JAVA_HOME=/Library/Java/J">
 
 
 
@@ -125,7 +126,7 @@
 
 
 
-  <title>tools-jdk | Xin</title>
+  <title>开发工具：JDK | Xin</title>
   
 
 
@@ -299,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">tools-jdk</h1>
+          <h1 class="post-title" itemprop="name headline">开发工具：JDK</h1>
         
 
         <div class="post-meta">
@@ -321,6 +322,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">开发工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -354,7 +377,20 @@
       
 
       
-        
+        <h3 id="JDK-下载与安装："><a href="#JDK-下载与安装：" class="headerlink" title="JDK 下载与安装："></a>JDK 下载与安装：</h3><ol>
+<li><p>下载 JDK 安装包<br>JDK Download: <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p>
+</li>
+<li><p>安装 JDK<br>双击 JDK 安装包<code>jdk-8u191-macosx-x64.dmg</code> . 一直默认执行<code>下一步</code>，直至安装完成。</p>
+</li>
+<li><p>配置环境变量</p>
+</li>
+</ol>
+<p>JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home<br>export PATH=$HOME/bin:/usr/local/bin:$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre<br>:wq!<br>source .zshrc</p>
+<ol>
+<li>检查 JDK 版本<br>java -version<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">➜ java -version</span><br><span class="line">java version &quot;1.8.0_191&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_191-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.151-b12, mixed mode)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
       
     </div>
     
@@ -368,6 +404,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+          
+        </div>
       
 
       
@@ -442,8 +484,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -523,6 +574,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDK-下载与安装："><span class="nav-number">1.</span> <span class="nav-text">JDK 下载与安装：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
