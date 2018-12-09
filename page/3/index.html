@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,25 +58,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
@@ -78,8 +80,35 @@
 
 
 
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
-<meta name="description" content="Make it happen!">
+
+  
+
+
+
+
+  <meta name="description" content="Make it happen!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xin">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/page/3/index.html">
@@ -92,29 +121,6 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
 
 
 
@@ -122,7 +128,11 @@
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Xin</title>
   
@@ -131,18 +141,38 @@
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?7c3aa33e96e67ec6358c8dc39b000107";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -163,19 +193,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Xin</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,75 +211,55 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archieven</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -259,12 +267,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -277,6 +293,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -286,8 +304,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -301,25 +319,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/09/alibaba-java-coding-guidelines/" itemprop="url">阿里巴巴Java开发手册</a></h1>
+                
+                <a href="/2018/09/09/alibaba-java-coding-guidelines/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">阿里巴巴Java开发手册</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T06:34:54+08:00">
-                2018-09-09
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-09-09 06:34:54 / Post aangepast: 19:26:19" itemprop="dateCreated datePublished" datetime="2018-09-09T06:34:54+08:00">2018-09-09</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -332,14 +364,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/style/" itemprop="url" rel="index">
-                    <span itemprop="name">编码规范</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/style/" itemprop="url" rel="index"><span itemprop="name">编码规范</span></a></span>
 
                 
                 
@@ -376,21 +404,29 @@
         
           <h3 id="一、编程规约"><a href="#一、编程规约" class="headerlink" title="一、编程规约"></a>一、编程规约</h3>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/09/alibaba-java-coding-guidelines/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/09/09/alibaba-java-coding-guidelines/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -423,6 +459,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -432,8 +470,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -447,25 +485,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/08/java-code-conventions/" itemprop="url">Java Code Conventions</a></h1>
+                
+                <a href="/2018/09/08/java-code-conventions/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">Java Code Conventions</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-08T09:17:23+08:00">
-                2018-09-08
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-09-08 09:17:23" itemprop="dateCreated datePublished" datetime="2018-09-08T09:17:23+08:00">2018-09-08</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-10-28 08:50:28" itemprop="dateModified" datetime="2018-10-28T08:50:28+08:00">2018-10-28</time>
+              
             
           </span>
 
@@ -478,14 +542,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/style/" itemprop="url" rel="index">
-                    <span itemprop="name">编码规范</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/style/" itemprop="url" rel="index"><span itemprop="name">编码规范</span></a></span>
 
                 
                 
@@ -522,21 +582,29 @@
         
           <p>1 - Introduction<br> 1.1 Why Have Code Conventions<br>Code conventions are important to programmers for a number of reasons:<br>• 80% of the lifetime cost of a piece of software goes to maintenance.<br>• Hardly any software is maintained for its whole life by the original author.<br>• Code conventions improve the readability of the software, allowing engineers to<br>understand new code more quickly and thoroughly.<br>• If you ship your source code as a product, you need to make sure it is as well packaged<br>and clean as any other product you create.<br> 1.2 Acknowledgments<br>This document reflects the Java language coding standards presented in the Java Language<br>Specification, from Sun Microsystems. Major contributions are from Peter King, Patrick<br>Naughton, Mike DeMoney, Jonni Kanerva, Kathy Walrath, and Scott Hommel.<br>For questions concerning adaptation, modification, or redistribution of this document, please<br>read our copyright notice at <a href="http://java.sun.com/docs/codeconv/html/Copyright.doc.html" target="_blank" rel="noopener">http://java.sun.com/docs/codeconv/html/Copyright.doc.html</a>.<br>Comments on this document should be submitted to our feedback form at <a href="http://java.sun.com/" target="_blank" rel="noopener">http://java.sun.com/</a><br>docs/forms/sendusmail.html.<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/08/java-code-conventions/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/09/08/java-code-conventions/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -569,6 +637,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -578,8 +648,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -593,25 +663,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/07/google-java-style-guide/" itemprop="url">Google Java Style Guide</a></h1>
+                
+                <a href="/2018/09/07/google-java-style-guide/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">Google Java Style Guide</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-07T23:25:24+08:00">
-                2018-09-07
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-09-07 23:25:24" itemprop="dateCreated datePublished" datetime="2018-09-07T23:25:24+08:00">2018-09-07</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-09-08 09:25:42" itemprop="dateModified" datetime="2018-09-08T09:25:42+08:00">2018-09-08</time>
+              
             
           </span>
 
@@ -624,14 +720,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/style/" itemprop="url" rel="index">
-                    <span itemprop="name">编码规范</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/style/" itemprop="url" rel="index"><span itemprop="name">编码规范</span></a></span>
 
                 
                 
@@ -669,21 +761,29 @@
           <h3 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h3><p>This document serves as the <strong>complete</strong> definition of Google’s coding standards for source code in the Java™ Programming Language. A Java source file is described as being in Google Style if and only if it adheres to the rules herein.</p>
 <p>Like other programming style guides, the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well. However, this document focuses primarily on the <strong>hard-and-fast</strong> rules that we follow universally, and avoids giving advice that isn’t clearly enforceable (whether by human or tool).<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/07/google-java-style-guide/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/09/07/google-java-style-guide/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -716,6 +816,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -725,8 +827,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -740,25 +842,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/26/leetcode-shell/" itemprop="url">LeetCode Shell</a></h1>
+                
+                <a href="/2018/03/26/leetcode-shell/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">LeetCode Shell</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T16:14:15+08:00">
-                2018-03-26
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-26 16:14:15" itemprop="dateCreated datePublished" datetime="2018-03-26T16:14:15+08:00">2018-03-26</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-30 09:55:24" itemprop="dateModified" datetime="2018-03-30T09:55:24+08:00">2018-03-30</time>
+              
             
           </span>
 
@@ -771,14 +899,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/program/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
 
                 
                 
@@ -823,21 +947,29 @@
 <p>你的脚本应当有如下输出，以频率降序排列：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">the 4</span><br><span class="line">is 3</span><br><span class="line">sunny 2</span><br><span class="line">day 1</span><br></pre></td></tr></table></figure></p>
 <p>说明:<br>不要担心处理排序，每个词的出现频率是唯一的。<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/26/leetcode-shell/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/26/leetcode-shell/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -870,6 +1002,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -879,8 +1013,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -894,25 +1028,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/26/leetcode-db/" itemprop="url">LeetCode 数据库</a></h1>
+                
+                <a href="/2018/03/26/leetcode-db/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">LeetCode 数据库</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T16:11:42+08:00">
-                2018-03-26
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-26 16:11:42" itemprop="dateCreated datePublished" datetime="2018-03-26T16:11:42+08:00">2018-03-26</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-28 17:21:29" itemprop="dateModified" datetime="2018-03-28T17:21:29+08:00">2018-03-28</time>
+              
             
           </span>
 
@@ -925,14 +1085,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/program/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
 
                 
                 
@@ -971,21 +1127,29 @@
 <p>表2: Address<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| 列名         | 类型    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| AddressId   | int     |</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| City        | varchar |</span><br><span class="line">| State       | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">AddressId 是上表主键.</span><br></pre></td></tr></table></figure></p>
 <p>写一个 SQL 查询语句，满足条件：无论 person 是否有地址信息，都需要基于上述两表提供 person 的以下信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/26/leetcode-db/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/26/leetcode-db/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1018,6 +1182,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1027,8 +1193,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1042,25 +1208,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/26/leetcode-algorithms/" itemprop="url">LeetCode 算法题</a></h1>
+                
+                <a href="/2018/03/26/leetcode-algorithms/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">LeetCode 算法题</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T16:10:13+08:00">
-                2018-03-26
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-26 16:10:13 / Post aangepast: 17:03:53" itemprop="dateCreated datePublished" datetime="2018-03-26T16:10:13+08:00">2018-03-26</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1073,14 +1253,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/program/" itemprop="url" rel="index"><span itemprop="name">编程</span></a></span>
 
                 
                 
@@ -1125,12 +1301,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1163,6 +1345,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1172,8 +1356,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1187,25 +1371,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/22/mianshi-linux/" itemprop="url">面试汇总:《Linux》</a></h1>
+                
+                <a href="/2018/03/22/mianshi-linux/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">面试汇总:《Linux》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T15:57:10+08:00">
-                2018-03-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-22 15:57:10 / Post aangepast: 20:16:33" itemprop="dateCreated datePublished" datetime="2018-03-22T15:57:10+08:00">2018-03-22</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1218,14 +1416,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -1269,12 +1463,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1307,6 +1507,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1316,8 +1518,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1331,25 +1533,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/22/mianshi-mybatis/" itemprop="url">面试汇总:《MyBatis》</a></h1>
+                
+                <a href="/2018/03/22/mianshi-mybatis/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">面试汇总:《MyBatis》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T15:55:40+08:00">
-                2018-03-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-22 15:55:40" itemprop="dateCreated datePublished" datetime="2018-03-22T15:55:40+08:00">2018-03-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-23 15:59:40" itemprop="dateModified" datetime="2018-03-23T15:59:40+08:00">2018-03-23</time>
+              
             
           </span>
 
@@ -1362,14 +1590,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -1414,21 +1638,29 @@
 </ul>
 <p>注：trim标签(前缀prefix 后缀suffix  移除第一个prefixOverrides 移除最后一个suffixOverrides)<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/22/mianshi-mybatis/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/22/mianshi-mybatis/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1461,6 +1693,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1470,8 +1704,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1485,25 +1719,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/22/mianshi-rpc/" itemprop="url">面试汇总:《RPC》</a></h1>
+                
+                <a href="/2018/03/22/mianshi-rpc/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">面试汇总:《RPC》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T15:53:27+08:00">
-                2018-03-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-22 15:53:27" itemprop="dateCreated datePublished" datetime="2018-03-22T15:53:27+08:00">2018-03-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-27 16:44:32" itemprop="dateModified" datetime="2018-03-27T16:44:32+08:00">2018-03-27</time>
+              
             
           </span>
 
@@ -1516,14 +1776,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -1567,12 +1823,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1605,6 +1867,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1614,8 +1878,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1629,25 +1893,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/22/mianshi-algorithms/" itemprop="url">面试汇总:《算法》</a></h1>
+                
+                <a href="/2018/03/22/mianshi-algorithms/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/3/index.html">面试汇总:《算法》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T15:38:35+08:00">
-                2018-03-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-22 15:38:35" itemprop="dateCreated datePublished" datetime="2018-03-22T15:38:35+08:00">2018-03-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-28 20:22:39" itemprop="dateModified" datetime="2018-03-28T20:22:39+08:00">2018-03-28</time>
+              
             
           </span>
 
@@ -1660,14 +1950,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -1706,21 +1992,29 @@
 <h5 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h5><p>排序思路：<br>1.在待排序的数列中任选一个数作为基准数；<br>2.将待排序的数列分区，小于或等于基准数的元素放在基准数的左边，大于基准数的放在基准数的右边；<br>3.对左右两个分区分别重复以上步骤，直到整个数列有序；</p>
 <p>代码示例：</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/22/mianshi-algorithms/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/22/mianshi-algorithms/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1749,15 +2043,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1784,77 +2075,109 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/avatar.png"
-                alt="ZHUANG JINXIN" />
-            
               <p class="site-author-name" itemprop="name">ZHUANG JINXIN</p>
               <p class="site-description motion-element" itemprop="description">Make it happen!</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">36</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
           
-
-          
-            <div class="links-of-author motion-element">
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/zhuangjinxin" target="_blank" title="GitHub">
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
                       
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:zhuangjinxin@hotmail.com" target="_blank" title="E-Mail">
+                    
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categorieën</span>
+                  </a>
+                </div>
+              
+
+              
                 
-            </div>
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">labels</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
           
 
           
           
 
           
+            
           
-
           
 
         </div>
@@ -1875,16 +2198,18 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ZHUANGJINXIN</span>
+  <span class="author" itemprop="copyrightHolder">ZHUANG JINXIN</span>
+
+  
 
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Mede mogelijk gemaakt door <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.6.0</div>
 
 
 
@@ -1892,42 +2217,17 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Thema – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.6.0</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i> 访问人数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i> 总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
 
 
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1271684048&web_id=1271684048" language="JavaScript"></script>
-  </div>
 
 
 
@@ -1943,7 +2243,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1962,7 +2265,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1982,16 +2289,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -2000,18 +2297,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
 
 
 
@@ -2023,21 +2315,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
@@ -2045,11 +2323,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -2073,6 +2347,16 @@
   
 
   
+
+  
+
+  
+  
+
+  
+
+  
+
   
 
   

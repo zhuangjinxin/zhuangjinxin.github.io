@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,25 +58,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
@@ -78,8 +80,35 @@
 
 
 
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
-<meta name="description" content="Make it happen!">
+
+  
+
+
+
+
+  <meta name="description" content="Make it happen!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xin">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/page/2/index.html">
@@ -92,29 +121,6 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
 
 
 
@@ -122,7 +128,11 @@
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Xin</title>
   
@@ -131,18 +141,38 @@
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?7c3aa33e96e67ec6358c8dc39b000107";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -163,19 +193,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Xin</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,75 +211,55 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archieven</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -259,12 +267,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -277,6 +293,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -286,8 +304,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -301,25 +319,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/tools-sublime-text/" itemprop="url">tools-sublime-text</a></h1>
+                
+                <a href="/2018/12/05/tools-sublime-text/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">tools-sublime-text</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T21:30:17+08:00">
-                2018-12-05
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-12-05 21:30:17 / Post aangepast: 22:01:22" itemprop="dateCreated datePublished" datetime="2018-12-05T21:30:17+08:00">2018-12-05</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -332,14 +364,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">开发工具</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a></span>
 
                 
                 
@@ -380,12 +408,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -416,6 +450,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -427,8 +463,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -442,25 +478,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/tools-charles/" itemprop="url">tools-charles</a></h1>
+                
+                <a href="/2018/12/05/tools-charles/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">tools-charles</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:29+08:00">
-                2018-12-05
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-12-05 21:29:29 / Post aangepast: 22:00:38" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:29+08:00">2018-12-05</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -473,14 +523,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">开发工具</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a></span>
 
                 
                 
@@ -521,12 +567,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -557,6 +609,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -568,8 +622,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -583,25 +637,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/tools-gradle/" itemprop="url">tools-gradle</a></h1>
+                
+                <a href="/2018/12/05/tools-gradle/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">tools-gradle</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:22+08:00">
-                2018-12-05
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-12-05 21:29:22 / Post aangepast: 22:00:49" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:22+08:00">2018-12-05</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -614,14 +682,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">开发工具</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a></span>
 
                 
                 
@@ -662,12 +726,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -698,6 +768,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -709,8 +781,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -724,25 +796,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/tools-maven/" itemprop="url">tools-maven</a></h1>
+                
+                <a href="/2018/12/05/tools-maven/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">tools-maven</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:12+08:00">
-                2018-12-05
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-12-05 21:29:12 / Post aangepast: 22:01:03" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:12+08:00">2018-12-05</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -755,14 +841,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">开发工具</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a></span>
 
                 
                 
@@ -803,12 +885,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -841,6 +929,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -850,8 +940,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -865,25 +955,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/05/tools-jdk/" itemprop="url">开发工具：JDK</a></h1>
+                
+                <a href="/2018/12/05/tools-jdk/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">开发工具：JDK</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:02+08:00">
-                2018-12-05
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-12-05 21:29:02 / Post aangepast: 22:54:12" itemprop="dateCreated datePublished" datetime="2018-12-05T21:29:02+08:00">2018-12-05</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -896,14 +1000,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">开发工具</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a></span>
 
                 
                 
@@ -948,12 +1048,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -986,6 +1092,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -995,8 +1103,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1010,25 +1118,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/01/zuckerberg-ppt/" itemprop="url">扎克伯格的时间管理PPT</a></h1>
+                
+                <a href="/2018/11/01/zuckerberg-ppt/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">扎克伯格的时间管理PPT</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T22:03:34+08:00">
-                2018-11-01
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-11-01 22:03:34" itemprop="dateCreated datePublished" datetime="2018-11-01T22:03:34+08:00">2018-11-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-12-09 08:46:37" itemprop="dateModified" datetime="2018-12-09T08:46:37+08:00">2018-12-09</time>
+              
             
           </span>
 
@@ -1041,14 +1175,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/work/" itemprop="url" rel="index">
-                    <span itemprop="name">工作效率</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/work/" itemprop="url" rel="index"><span itemprop="name">工作效率</span></a></span>
 
                 
                 
@@ -1086,21 +1216,29 @@
           <p>1.时间常有，时间在于优先。</p>
 <img src="/2018/11/01/zuckerberg-ppt/1.jpg">
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/01/zuckerberg-ppt/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/11/01/zuckerberg-ppt/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1133,6 +1271,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1142,8 +1282,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1157,25 +1297,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/09/software-engineer-booklist/" itemprop="url">软件开发书单管理</a></h1>
+                
+                <a href="/2018/09/09/software-engineer-booklist/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">软件开发书单管理</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T19:01:16+08:00">
-                2018-09-09
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-09-09 19:01:16 / Post aangepast: 19:21:27" itemprop="dateCreated datePublished" datetime="2018-09-09T19:01:16+08:00">2018-09-09</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1224,12 +1378,18 @@
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1262,6 +1422,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1271,8 +1433,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1286,25 +1448,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/09/tools-collection/" itemprop="url">软件开发工具调研</a></h1>
+                
+                <a href="/2018/09/09/tools-collection/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">软件开发工具调研</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T09:39:22+08:00">
-                2018-09-09
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-09-09 09:39:22 / Post aangepast: 18:55:31" itemprop="dateCreated datePublished" datetime="2018-09-09T09:39:22+08:00">2018-09-09</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1317,14 +1493,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tools/" itemprop="url" rel="index">
-                    <span itemprop="name">开发工具</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a></span>
 
                 
                 
@@ -1361,21 +1533,29 @@
         
           <h3 id="已分类"><a href="#已分类" class="headerlink" title="已分类"></a>已分类</h3>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/09/tools-collection/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/09/09/tools-collection/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1408,6 +1588,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1417,8 +1599,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1432,25 +1614,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/09/ganji-mysql-regulations/" itemprop="url">赶集网MySQL军规</a></h1>
+                
+                <a href="/2018/09/09/ganji-mysql-regulations/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">赶集网MySQL军规</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T09:05:55+08:00">
-                2018-09-09
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-09-09 09:05:55 / Post aangepast: 09:29:56" itemprop="dateCreated datePublished" datetime="2018-09-09T09:05:55+08:00">2018-09-09</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1463,14 +1659,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/style/" itemprop="url" rel="index">
-                    <span itemprop="name">编码规范</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/style/" itemprop="url" rel="index"><span itemprop="name">编码规范</span></a></span>
 
                 
                 
@@ -1512,21 +1704,29 @@
 <li>平衡范式与冗余，为提高效率可以牺牲范式设计，冗余数据</li>
 <li>拒绝3B(big)，大sql，大事务，大批量
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/09/ganji-mysql-regulations/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/09/09/ganji-mysql-regulations/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1559,6 +1759,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1568,8 +1770,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1583,25 +1785,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/09/58-daojia-mysql-regulations/" itemprop="url">58到家MySQL军规</a></h1>
+                
+                <a href="/2018/09/09/58-daojia-mysql-regulations/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/2/index.html">58到家MySQL军规</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T07:59:50+08:00">
-                2018-09-09
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-09-09 07:59:50 / Post aangepast: 09:30:03" itemprop="dateCreated datePublished" datetime="2018-09-09T07:59:50+08:00">2018-09-09</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1614,14 +1830,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/style/" itemprop="url" rel="index">
-                    <span itemprop="name">编码规范</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/style/" itemprop="url" rel="index"><span itemprop="name">编码规范</span></a></span>
 
                 
                 
@@ -1664,21 +1876,29 @@
 <li>禁止在线上环境做数据库压力测试</li>
 <li>测试，开发，线上数据库环境必须隔离
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/09/58-daojia-mysql-regulations/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/09/09/58-daojia-mysql-regulations/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1707,15 +1927,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1742,77 +1959,109 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/avatar.png"
-                alt="ZHUANG JINXIN" />
-            
               <p class="site-author-name" itemprop="name">ZHUANG JINXIN</p>
               <p class="site-description motion-element" itemprop="description">Make it happen!</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">36</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
           
-
-          
-            <div class="links-of-author motion-element">
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/zhuangjinxin" target="_blank" title="GitHub">
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
                       
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:zhuangjinxin@hotmail.com" target="_blank" title="E-Mail">
+                    
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categorieën</span>
+                  </a>
+                </div>
+              
+
+              
                 
-            </div>
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">labels</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
           
 
           
           
 
           
+            
           
-
           
 
         </div>
@@ -1833,16 +2082,18 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ZHUANGJINXIN</span>
+  <span class="author" itemprop="copyrightHolder">ZHUANG JINXIN</span>
+
+  
 
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Mede mogelijk gemaakt door <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.6.0</div>
 
 
 
@@ -1850,42 +2101,17 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Thema – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.6.0</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i> 访问人数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i> 总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
 
 
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1271684048&web_id=1271684048" language="JavaScript"></script>
-  </div>
 
 
 
@@ -1901,7 +2127,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1920,7 +2149,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1940,16 +2173,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1958,18 +2181,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
 
 
 
@@ -1981,21 +2199,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
@@ -2003,11 +2207,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -2031,6 +2231,16 @@
   
 
   
+
+  
+
+  
+  
+
+  
+
+  
+
   
 
   

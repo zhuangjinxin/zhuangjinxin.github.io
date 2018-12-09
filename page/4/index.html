@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -50,25 +58,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
 
 
 
@@ -78,8 +80,35 @@
 
 
 
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
 
-<meta name="description" content="Make it happen!">
+
+  
+
+
+
+
+  <meta name="description" content="Make it happen!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xin">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/page/4/index.html">
@@ -92,29 +121,6 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
 
 
 
@@ -122,7 +128,11 @@
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Xin</title>
   
@@ -131,18 +141,38 @@
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?7c3aa33e96e67ec6358c8dc39b000107";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -163,19 +193,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Xin</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,75 +211,55 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archieven</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -259,12 +267,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -277,6 +293,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -286,8 +304,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -301,25 +319,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/22/mianshi-design-pattern/" itemprop="url">面试汇总:《设计模式》</a></h1>
+                
+                <a href="/2018/03/22/mianshi-design-pattern/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/4/index.html">面试汇总:《设计模式》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T15:25:38+08:00">
-                2018-03-22
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-22 15:25:38" itemprop="dateCreated datePublished" datetime="2018-03-22T15:25:38+08:00">2018-03-22</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-26 11:23:14" itemprop="dateModified" datetime="2018-03-26T11:23:14+08:00">2018-03-26</time>
+              
             
           </span>
 
@@ -332,14 +376,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -378,21 +418,29 @@
 <p><strong>常用的设计模式</strong><br><strong>创建型模式</strong>: 单例模式、工厂模式、抽象工厂模式、建造者模式、原型模式<br><strong>结构型模式</strong>: 适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式<br><strong>行为型模式</strong>: 模版方法模式、策略模式、观察者模式、中介者模式、访问者模式、责任链模式、迭代器模式、解释器模式、命令模式、备忘录模式、状态模式</p>
 <p>注: 只回答最熟悉的设计模式，包括但不限于: 单例模式、工厂模式、装饰器模式、适配器模式、代理模式、观察者模式、模版方法模式<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/22/mianshi-design-pattern/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/22/mianshi-design-pattern/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -425,6 +473,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -434,8 +484,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -449,25 +499,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/21/mianshi-redis/" itemprop="url">面试汇总:《Redis》</a></h1>
+                
+                <a href="/2018/03/21/mianshi-redis/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/4/index.html">面试汇总:《Redis》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T17:36:29+08:00">
-                2018-03-21
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-21 17:36:29" itemprop="dateCreated datePublished" datetime="2018-03-21T17:36:29+08:00">2018-03-21</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-28 18:14:14" itemprop="dateModified" datetime="2018-03-28T18:14:14+08:00">2018-03-28</time>
+              
             
           </span>
 
@@ -480,14 +556,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -526,21 +598,29 @@
 <h4 id="Redis常用数据类型"><a href="#Redis常用数据类型" class="headerlink" title="Redis常用数据类型"></a>Redis常用数据类型</h4><p>字符串、哈希、列表、集合、有序集合</p>
 <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p><strong>string</strong>: set get mset mget del incr decr append strlen setrange getrange<br><strong>hash</strong>: hset hget hmset hmget hdel hgetall hexists hkeys hvalues hsetnx hincrby hstrlen<br><strong>list</strong>: lpush rpush lpop rpop blpop brpop lrange lindex llen lset<br><strong>set</strong>: sadd srem scard smermbers sismember srandmember spop|sinter sunion sdiff<br><strong>zset</strong>: zadd zrem zcard zincrby zrank zrevrank zrange zrangebyscore zinterstore zunionstore<br><strong>发布订阅</strong>: publish subscribe unsubscribe psubscribe pubsub<br><strong>键管理</strong>: type object exists dbsize rename renamenx randomkey<br><strong>过期时间</strong>: expire expireat pexpire pexpireat ttl pttl persist<br><strong>迁移</strong>: move dump+restore migrate<br><strong>遍历键</strong>: keys scan<br><strong>数据库</strong>: select flushdb flushall<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/21/mianshi-redis/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/21/mianshi-redis/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -573,6 +653,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -582,8 +664,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -597,25 +679,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/21/mianshi-mysql/" itemprop="url">面试汇总:《MySQL》</a></h1>
+                
+                <a href="/2018/03/21/mianshi-mysql/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/4/index.html">面试汇总:《MySQL》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T17:36:18+08:00">
-                2018-03-21
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-21 17:36:18" itemprop="dateCreated datePublished" datetime="2018-03-21T17:36:18+08:00">2018-03-21</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-28 18:29:12" itemprop="dateModified" datetime="2018-03-28T18:29:12+08:00">2018-03-28</time>
+              
             
           </span>
 
@@ -628,14 +736,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -674,21 +778,29 @@
 <h5 id="五大约束"><a href="#五大约束" class="headerlink" title="五大约束"></a>五大约束</h5><p><strong>PRIMARY KEY</strong>： 主键约束<br><strong>UNIQUE</strong>： 唯一性约束<br><strong>DEFAULT</strong>： 默认值<br><strong>NOT NULL</strong>： 非空约束<br><strong>FOREIGN KEY</strong>： 外键约束</p>
 <h5 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h5><p>1).四大特性 ACID<br>原子性、一致性、隔离性、持久性<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/21/mianshi-mysql/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/21/mianshi-mysql/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -721,6 +833,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -730,8 +844,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -745,25 +859,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/21/mianshi-spring/" itemprop="url">面试汇总:《Spring》</a></h1>
+                
+                <a href="/2018/03/21/mianshi-spring/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/4/index.html">面试汇总:《Spring》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T17:36:07+08:00">
-                2018-03-21
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-21 17:36:07" itemprop="dateCreated datePublished" datetime="2018-03-21T17:36:07+08:00">2018-03-21</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-27 17:54:23" itemprop="dateModified" datetime="2018-03-27T17:54:23+08:00">2018-03-27</time>
+              
             
           </span>
 
@@ -776,14 +916,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -824,21 +960,29 @@
 <p><strong>实现原理</strong>：<br>动态代理<br>动态代理的实现方法：<br>实现InvocationHandler接口，重写invoke方法；在Invoke方法里写增强处理的逻辑，这个公共代理类在运行的时候才能明确自己要代理的对象，同时可以实现该被代理类的方法的实现，然后在实现类方法的时候可以进行增强处理。</p>
 <p><strong>AOP实现的方式</strong>：<br>1.通过注解 @Aspect定义切面 @Before/@After/@Around(表达式) 在切入方法执行前后插入功能<br>2.通过Spring的API实现AOP<br>3.自定义类来实现AOP，不实现spring的自带的通知<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/21/mianshi-spring/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/21/mianshi-spring/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -871,6 +1015,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -880,8 +1026,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -895,25 +1041,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/21/mianshi-java/" itemprop="url">面试汇总:《Java》</a></h1>
+                
+                <a href="/2018/03/21/mianshi-java/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/4/index.html">面试汇总:《Java》</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T11:10:01+08:00">
-                2018-03-21
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-21 11:10:01" itemprop="dateCreated datePublished" datetime="2018-03-21T11:10:01+08:00">2018-03-21</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-28 20:05:17" itemprop="dateModified" datetime="2018-03-28T20:05:17+08:00">2018-03-28</time>
+              
             
           </span>
 
@@ -926,14 +1098,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/job/" itemprop="url" rel="index">
-                    <span itemprop="name">面试</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/job/" itemprop="url" rel="index"><span itemprop="name">面试</span></a></span>
 
                 
                 
@@ -971,21 +1139,29 @@
           <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><h3 id="Java中常用的数据结构"><a href="#Java中常用的数据结构" class="headerlink" title="Java中常用的数据结构"></a>Java中常用的数据结构</h3><p><strong>List</strong>: ArrayList、LinkedList<br><strong>Set</strong>: HashSet<br><strong>Map</strong>: HashMap、ConcurrentHashMap</p>
 <h3 id="ArrayList、LinkedList"><a href="#ArrayList、LinkedList" class="headerlink" title="ArrayList、LinkedList"></a>ArrayList、LinkedList</h3><p><strong>ArrayList</strong>：基于动态数组实现 默认大小10 扩容1.5倍+1 线程不安全 CopyOnWriteArrayList或Vector<br><strong>LinkedList</strong>：基于双向链表实现<br><strong>区别</strong>：<br>1.随机访问元素时，ArrayList优于LinkedList；(因为LinkedList要移动指针)<br>2.新增或删除元素时，LinkedList优于ArrayList；(因为ArrayList要移动数据）<br><strong>注意</strong>：Arraylist不能用正向for循环删除元素<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/21/mianshi-java/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/21/mianshi-java/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1018,6 +1194,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1027,8 +1205,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZHUANG JINXIN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/avatar.png">
+      <meta itemprop="description" content="Make it happen!">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1042,25 +1220,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/20/hello-world/" itemprop="url">Hello World</a></h1>
+                
+                <a href="/2018/03/20/hello-world/" class="post-title-link" itemprop="http://blog.zhuangjinxin.top/page/4/index.html">Hello World</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Geplaatst op</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T22:54:07+08:00">
-                2018-03-20
-              </time>
+
+              
+                
+              
+
+              <time title="Post aangemaakt: 2018-03-20 22:54:07" itemprop="dateCreated datePublished" datetime="2018-03-20T22:54:07+08:00">2018-03-20</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Post aangepast: 2018-03-23 17:48:27" itemprop="dateModified" datetime="2018-03-23T17:48:27+08:00">2018-03-23</time>
+              
             
           </span>
 
@@ -1095,21 +1299,29 @@
         
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/20/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/03/20/hello-world/#more" rel="contents">
+                Lees meer &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1138,15 +1350,12 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1173,77 +1382,109 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/avatar.png"
-                alt="ZHUANG JINXIN" />
-            
               <p class="site-author-name" itemprop="name">ZHUANG JINXIN</p>
               <p class="site-description motion-element" itemprop="description">Make it happen!</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">36</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
           
-
-          
-            <div class="links-of-author motion-element">
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/zhuangjinxin" target="_blank" title="GitHub">
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
                       
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:zhuangjinxin@hotmail.com" target="_blank" title="E-Mail">
+                    
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categorieën</span>
+                  </a>
+                </div>
+              
+
+              
                 
-            </div>
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">labels</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
           
 
           
           
 
           
+            
           
-
           
 
         </div>
@@ -1264,16 +1505,18 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">ZHUANGJINXIN</span>
+  <span class="author" itemprop="copyrightHolder">ZHUANG JINXIN</span>
+
+  
 
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Mede mogelijk gemaakt door <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.6.0</div>
 
 
 
@@ -1281,42 +1524,17 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Thema – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.6.0</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i> 访问人数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i> 总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
 
 
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1271684048&web_id=1271684048" language="JavaScript"></script>
-  </div>
 
 
 
@@ -1332,7 +1550,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1351,7 +1572,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1371,16 +1596,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1389,18 +1604,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
 
 
 
@@ -1412,21 +1622,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
@@ -1434,11 +1630,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -1462,6 +1654,16 @@
   
 
   
+
+  
+
+  
+  
+
+  
+
+  
+
   
 
   
