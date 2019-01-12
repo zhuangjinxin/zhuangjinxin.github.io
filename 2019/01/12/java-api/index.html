@@ -108,18 +108,20 @@
 
 
 
-  <meta name="description" content="Java API Document 分为两部分：Java SE 和 JDK。  Java SE (Java Standard Edition) 定义了用于通用计算的核心Java平台； JDK (Java Development Kit) API特定于JDK，并不一定适用于Java SE Platform的所有实现。  Java SE：模块关系图">
+  <meta name="description" content="Java API Document 分为两部分：Java SE 和 JDK。  Java SE (Java Standard Edition) 定义了用于通用计算的核心Java平台； JDK (Java Development Kit) API特定于JDK，并不一定适用于Java SE Platform的所有实现。  说明：以下内容基于 Java Version 11.0.1 整理,不同版本可能会">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java API 文档">
 <meta property="og:url" content="http://blog.zhuangjinxin.top/2019/01/12/java-api/index.html">
 <meta property="og:site_name" content="Xin">
-<meta property="og:description" content="Java API Document 分为两部分：Java SE 和 JDK。  Java SE (Java Standard Edition) 定义了用于通用计算的核心Java平台； JDK (Java Development Kit) API特定于JDK，并不一定适用于Java SE Platform的所有实现。  Java SE：模块关系图">
+<meta property="og:description" content="Java API Document 分为两部分：Java SE 和 JDK。  Java SE (Java Standard Edition) 定义了用于通用计算的核心Java平台； JDK (Java Development Kit) API特定于JDK，并不一定适用于Java SE Platform的所有实现。  说明：以下内容基于 Java Version 11.0.1 整理,不同版本可能会">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://blog.zhuangjinxin.top/2019/01/12/java-api/java-se.jpg">
-<meta property="og:updated_time" content="2019-01-12T04:10:53.315Z">
+<meta property="og:image" content="http://blog.zhuangjinxin.top/2019/01/12/java-api/java-se-base.jpg">
+<meta property="og:updated_time" content="2019-01-12T04:27:27.590Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java API 文档">
-<meta name="twitter:description" content="Java API Document 分为两部分：Java SE 和 JDK。  Java SE (Java Standard Edition) 定义了用于通用计算的核心Java平台； JDK (Java Development Kit) API特定于JDK，并不一定适用于Java SE Platform的所有实现。  Java SE：模块关系图">
+<meta name="twitter:description" content="Java API Document 分为两部分：Java SE 和 JDK。  Java SE (Java Standard Edition) 定义了用于通用计算的核心Java平台； JDK (Java Development Kit) API特定于JDK，并不一定适用于Java SE Platform的所有实现。  说明：以下内容基于 Java Version 11.0.1 整理,不同版本可能会">
 <meta name="twitter:image" content="http://blog.zhuangjinxin.top/2019/01/12/java-api/java-se.jpg">
 
 
@@ -412,7 +414,7 @@
                 
               
 
-              <time title="创建时间：2019-01-12 11:21:32 / 修改时间：12:10:53" itemprop="dateCreated datePublished" datetime="2019-01-12T11:21:32+08:00">2019-01-12</time>
+              <time title="创建时间：2019-01-12 11:21:32 / 修改时间：12:27:27" itemprop="dateCreated datePublished" datetime="2019-01-12T11:21:32+08:00">2019-01-12</time>
             
 
             
@@ -481,9 +483,14 @@
 <li>Java SE (Java Standard Edition) 定义了用于通用计算的核心Java平台；</li>
 <li>JDK (Java Development Kit) API特定于JDK，并不一定适用于Java SE Platform的所有实现。</li>
 </ul>
-<h3 id="Java-SE："><a href="#Java-SE：" class="headerlink" title="Java SE："></a>Java SE：</h3><p>模块关系图<br><img src="/2019/01/12/java-api/java-se.jpg"></p>
+<p>说明：以下内容基于 Java Version 11.0.1 整理,不同版本可能会略有不同。</p>
+<h3 id="Java-SE"><a href="#Java-SE" class="headerlink" title="Java SE"></a>Java SE</h3><p>模块关系图<br><img src="/2019/01/12/java-api/java-se.jpg"></p>
 <a id="more"></a>
-<h4 id="Java-Base"><a href="#Java-Base" class="headerlink" title="Java Base"></a>Java Base</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">java.base</span><br><span class="line">	java.io</span><br><span class="line">	java.lang</span><br><span class="line">		java.lang.annotation</span><br><span class="line">		java.lang.invoke</span><br><span class="line">		java.lang.ref</span><br><span class="line">		java.reflect</span><br><span class="line">	java.math</span><br><span class="line">	java.net</span><br><span class="line">		java.net.sql</span><br><span class="line">	java.nio</span><br><span class="line">		java.nio.channels</span><br><span class="line">			java.nio.channels.spi</span><br><span class="line">		java.nio.charset</span><br><span class="line">			java.nio.charset.spi</span><br><span class="line">		java.nio.file</span><br><span class="line">			java.nio.file.attribute</span><br><span class="line">			java.nio.file.spi</span><br><span class="line">	java.security</span><br><span class="line">		java.security.acl</span><br><span class="line">		java.security.cert</span><br><span class="line">		java.security.interfaces</span><br><span class="line">		java.security.spec</span><br><span class="line">	java.text</span><br><span class="line">		java.text.spi</span><br><span class="line">	java.time</span><br><span class="line">		java.time.chrono</span><br><span class="line">		java.time.format</span><br><span class="line">		java.time.temporal</span><br><span class="line">		java.time.zone</span><br><span class="line">	java.util</span><br><span class="line">		java.util.concurrent</span><br><span class="line">			java.util.concurrent.atomic</span><br><span class="line">			java.util.concurrent.locks</span><br><span class="line">		java.util.function</span><br><span class="line">		java.util.jar</span><br><span class="line">		java.util.regex</span><br><span class="line">		java.util.spi</span><br><span class="line">		java.util.stream</span><br><span class="line">		java.util.zip</span><br></pre></td></tr></table></figure>
+<h4 id="java-base"><a href="#java-base" class="headerlink" title="java.base"></a>java.base</h4><img src="/2019/01/12/java-api/java-se-base.jpg">
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
+<li>网站: <a href="https://docs.oracle.com/en/java/javase/11/docs/api/index.html" target="_blank" rel="noopener">Java SE 11 API Document</a>  </li>
+</ul>
+
       
     </div>
 
@@ -503,6 +510,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
       
 
       
@@ -730,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-SE："><span class="nav-number">1.</span> <span class="nav-text">Java SE：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Base"><span class="nav-number">1.1.</span> <span class="nav-text">Java Base</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-SE"><span class="nav-number">1.</span> <span class="nav-text">Java SE</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#java-base"><span class="nav-number">1.1.</span> <span class="nav-text">java.base</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">2.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>
