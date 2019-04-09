@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Xin">
 <meta property="og:description" content="SET/GETRedis is what is called a key-value store, often referred to as a NoSQL database. The essence of a key-value store is the ability to store some data, called a value, inside a key. This data can">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-09T13:29:01.850Z">
+<meta property="og:updated_time" content="2019-04-09T13:31:52.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis Tutorial">
 <meta name="twitter:description" content="SET/GETRedis is what is called a key-value store, often referred to as a NoSQL database. The essence of a key-value store is the ability to store some data, called a value, inside a key. This data can">
@@ -410,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2019-04-09 21:24:48 / 修改时间：21:29:01" itemprop="dateCreated datePublished" datetime="2019-04-09T21:24:48+08:00">2019-04-09</time>
+              <time title="创建时间：2019-04-09 21:24:48 / 修改时间：21:31:52" itemprop="dateCreated datePublished" datetime="2019-04-09T21:24:48+08:00">2019-04-09</time>
             
 
             
@@ -458,6 +458,7 @@
       
         <h3 id="SET-GET"><a href="#SET-GET" class="headerlink" title="SET/GET"></a>SET/GET</h3><p>Redis is what is called a key-value store, often referred to as a NoSQL database. The essence of a key-value store is the ability to store some data, called a value, inside a key. This data can later be retrieved only if we know the exact key used to store it. We can use the command <strong>SET</strong> to store the value “fido” at key “server:name”:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET server:name &quot;fido&quot;</span><br></pre></td></tr></table></figure></p>
 <p>Redis will store our data permanently, so we can later ask “What is the value stored at key server:name?” and Redis will reply with “fido”:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET server:name =&gt; &quot;fido&quot;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>Tip: You can click the commands above to automatically execute them. The text after the arrow (=&gt;) shows the expected output.</p>
 <h3 id="DEL-SETNX-INCR"><a href="#DEL-SETNX-INCR" class="headerlink" title="DEL/SETNX/INCR"></a>DEL/SETNX/INCR</h3><p>Other common operations provided by key-value stores are <strong>DEL</strong> to delete a given key and associated value, SET-if-not-exists (called <strong>SETNX</strong> on Redis) that sets a key only if it does not already exist, and <strong>INCR</strong> to atomically increment a number stored at a given key:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SET connections 10</span><br><span class="line">INCR connections =&gt; 11</span><br><span class="line">INCR connections =&gt; 12</span><br><span class="line">DEL connections</span><br><span class="line">INCR connections =&gt; 1</span><br></pre></td></tr></table></figure></p>
 <h3 id="INCR"><a href="#INCR" class="headerlink" title="INCR"></a>INCR</h3><p>There is something special about <strong>INCR</strong>. Why do we provide such an operation if we can do it ourself with a bit of code? After all it is as simple as:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = GET count</span><br><span class="line">x = x + 1</span><br><span class="line">SET count x</span><br></pre></td></tr></table></figure></p>
