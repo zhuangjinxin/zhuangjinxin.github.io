@@ -572,7 +572,7 @@
                 
               
 
-              <time title="创建时间：2019-08-24 19:39:39 / 修改时间：19:43:04" itemprop="dateCreated datePublished" datetime="2019-08-24T19:39:39+08:00">2019-08-24</time>
+              <time title="创建时间：2019-08-24 19:39:39 / 修改时间：19:56:47" itemprop="dateCreated datePublished" datetime="2019-08-24T19:39:39+08:00">2019-08-24</time>
             
 
             
@@ -630,7 +630,42 @@
       
         
           
-            <h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4>
+            <h4 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h4><h4 id="Support-for-Unicode-11"><a href="#Support-for-Unicode-11" class="headerlink" title="Support for Unicode 11"></a>Support for Unicode 11</h4><p>core-libs/java.lang</p>
+<p>The JDK 12 release includes support for Unicode 11.0.0. Following the release of JDK 11, which supported Unicode 10.0.0, Unicode 11.0.0 introduced the following new features that are now included in JDK 12:</p>
+<ul>
+<li>684 new characters</li>
+<li>11 new blocks</li>
+<li>7 new scripts.</li>
+</ul>
+<p>684 new characters that include important additions for the following:</p>
+<ul>
+<li>66 emoji characters</li>
+<li>Copyleft symbol</li>
+<li>Half stars for rating systems</li>
+<li>Additional astrological symbols</li>
+<li>Xiangqi Chinese chess symbols</li>
+</ul>
+<p>7 new scripts :</p>
+<ul>
+<li>Hanifi Rohingya</li>
+<li>Old Sogdian</li>
+<li>Sogdian</li>
+<li>Dogra</li>
+<li>Gunjala Gondi</li>
+<li>Makasar</li>
+<li>Medefaidrin</li>
+</ul>
+<p>11 new blocks that include 7 blocks for the new scripts listed above and 4 blocks for the following existing scripts:</p>
+<ul>
+<li>Georgian Extended</li>
+<li>Mayan Numerals</li>
+<li>Indic Siyaq Numbers</li>
+<li>Chess Symbols</li>
+</ul>
+<h4 id="POSIX-SPAWN-Option-on-Linux"><a href="#POSIX-SPAWN-Option-on-Linux" class="headerlink" title="POSIX_SPAWN Option on Linux"></a>POSIX_SPAWN Option on Linux</h4><p>core-libs/java.lang</p>
+<p>As an additional way to launch processes on Linux, the <code>jdk.lang.Process.launchMechanism</code> property can be set to <code>POSIX_SPAWN</code>. This option has been available for a long time on other *nix platforms. The default launch mechanism (VFORK) on Linux is unchanged, so this additional option does not affect existing installations.</p>
+<p><code>POSIX_SPAWN</code> mitigates rare pathological cases when spawning child processes, but it has not yet been excessively tested. Prudence is advised when using <code>POSIX_SPAWN</code> in productive installations.</p>
+<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4>
           
         
       
