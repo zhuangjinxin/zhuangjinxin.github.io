@@ -1,112 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.png">
+  <link rel="mask-icon" href="/avatar.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/avatar.png?v=6.6.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/avatar.png?v=6.6.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/avatar.png?v=6.6.0">
-
-
-  <link rel="mask-icon" href="/avatar.png?v=6.6.0" color="#222">
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '6.6.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.zhuangjinxin.top","root":"/","scheme":"Mist","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
   <meta name="description" content="知乎技术专栏: 知乎部署系统演进Griffith - 知乎视频播放器为知乎增加快捷键Android DataBinding 编译变慢之谜数据分析在知乎商业质量保障中的初步实践知乎 HBase 实践知乎实时数仓实践及架构演进仪表盘场景的前端优化知乎 Android 客户端 Hybrid 调试实战知乎 AI 用户模型服务性能优化实践">
 <meta property="og:type" content="article">
@@ -120,18 +32,15 @@
 <meta name="twitter:title" content="知乎技术专栏">
 <meta name="twitter:description" content="知乎技术专栏: 知乎部署系统演进Griffith - 知乎视频播放器为知乎增加快捷键Android DataBinding 编译变慢之谜数据分析在知乎商业质量保障中的初步实践知乎 HBase 实践知乎实时数仓实践及架构演进仪表盘场景的前端优化知乎 Android 客户端 Hybrid 调试实战知乎 AI 用户模型服务性能优化实践">
 
+<link rel="canonical" href="http://blog.zhuangjinxin.top/2019/03/31/ref-zhihu-jishu-zhuanlan/">
 
 
-
-
-
-  <link rel="canonical" href="http://blog.zhuangjinxin.top/2019/03/31/ref-zhihu-jishu-zhuanlan/"/>
-
-
-
-<script type="text/javascript" id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: false,
+    isPost: true
   };
 </script>
 
@@ -143,321 +52,166 @@
 
 
 
-
-
-
-
-
   <noscript>
-  <style type="text/css">
-    .use-motion .motion-element,
-    .use-motion .brand,
-    .use-motion .menu-item,
-    .sidebar-inner,
-    .use-motion .post-block,
-    .use-motion .pagination,
-    .use-motion .comments,
-    .use-motion .post-header,
-    .use-motion .post-body,
-    .use-motion .collection-title { opacity: initial; }
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
-    .use-motion .logo,
-    .use-motion .site-title,
-    .use-motion .site-subtitle {
-      opacity: initial;
-      top: initial;
-    }
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
-    .use-motion {
-      .logo-line-before i { left: initial; }
-      .logo-line-after i { right: initial; }
-    }
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
   </style>
 </noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
 
-    <div class="custom-logo-site-title">
+  <div class="site-meta">
+
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Xin</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
-
 
 
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-about">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
+        <li class="menu-item menu-item-tags">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-categories">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-archives">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-commonweal">
+        <li class="menu-item menu-item-commonweal">
 
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益 404</a>
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
 
   </li>
+  </ul>
 
-      
-      
-    </ul>
-  
-
-  
-    
-
-  
-
-  
 </nav>
-
-
-
-  
-
-
-
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
+  <div class="posts-expand">
+      
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://blog.zhuangjinxin.top/2019/03/31/ref-zhihu-jishu-zhuanlan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/avatar.png">
       <meta itemprop="name" content="ZHUANG JINXIN">
       <meta itemprop="description" content="Make it happen!">
-      <meta itemprop="image" content="/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Xin">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">知乎技术专栏
-              
-            
-          </h1>
-        
+        <h1 class="post-title" itemprop="name headline">
+          知乎技术专栏
+        </h1>
 
         <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-03-31 16:23:20" itemprop="dateCreated datePublished" datetime="2019-03-31T16:23:20+08:00">2019-03-31</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+            </span>
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-04-05 11:19:02" itemprop="dateModified" datetime="2019-04-05T11:19:02+08:00">2019-04-05</time>
-              
-            
-          </span>
+              </span>
 
           
-
-          
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon"
-            >
-            <i class="fa fa-eye"></i>
-             阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
             </span>
-          
-
-          
-
-          
 
         </div>
       </header>
-    
 
     
     
@@ -465,301 +219,184 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
         <p><a href="https://zhuanlan.zhihu.com/hackers" target="_blank" rel="noopener"><strong>知乎技术专栏</strong></a>:</p>
 <p><a href="https://zhuanlan.zhihu.com/p/60627311" target="_blank" rel="noopener">知乎部署系统演进</a><br><a href="https://zhuanlan.zhihu.com/p/59686274" target="_blank" rel="noopener">Griffith - 知乎视频播放器</a><br><a href="https://zhuanlan.zhihu.com/p/59928288" target="_blank" rel="noopener">为知乎增加快捷键</a><br><a href="https://zhuanlan.zhihu.com/p/58010428" target="_blank" rel="noopener">Android DataBinding 编译变慢之谜</a><br><a href="https://zhuanlan.zhihu.com/p/57013245" target="_blank" rel="noopener">数据分析在知乎商业质量保障中的初步实践</a><br><a href="https://zhuanlan.zhihu.com/p/57739371" target="_blank" rel="noopener">知乎 HBase 实践</a><br><a href="https://zhuanlan.zhihu.com/p/56807637" target="_blank" rel="noopener">知乎实时数仓实践及架构演进</a><br><a href="https://zhuanlan.zhihu.com/p/55508401" target="_blank" rel="noopener">仪表盘场景的前端优化</a><br><a href="https://zhuanlan.zhihu.com/p/54611229" target="_blank" rel="noopener">知乎 Android 客户端 Hybrid 调试实战</a><br><a href="https://zhuanlan.zhihu.com/p/45907950" target="_blank" rel="noopener">知乎 AI 用户模型服务性能优化实践</a><br><a id="more"></a><br><a href="https://zhuanlan.zhihu.com/p/53130925" target="_blank" rel="noopener">知乎推荐系统的实践及重构之路</a><br><a href="https://zhuanlan.zhihu.com/p/51659894" target="_blank" rel="noopener">使用 SugarAdapter 快速构建 Android 列表页面</a><br><a href="https://zhuanlan.zhihu.com/p/48039838" target="_blank" rel="noopener">知乎社区核心业务 Golang 化实践</a><br><a href="https://zhuanlan.zhihu.com/p/50477119" target="_blank" rel="noopener">知乎如何洞察你的真实喜好？首页信息流技术揭秘</a><br><a href="https://zhuanlan.zhihu.com/p/50343423" target="_blank" rel="noopener">大数据平台的数据同步服务实践</a><br><a href="https://zhuanlan.zhihu.com/p/49542869" target="_blank" rel="noopener">知乎 Android 客户端 CI/CD 方面的努力</a><br><a href="https://zhuanlan.zhihu.com/p/48218035" target="_blank" rel="noopener">知乎 iOS App 启动时间测试实践</a><br><a href="https://zhuanlan.zhihu.com/p/48046671" target="_blank" rel="noopener">Druid 与知乎数据分析平台</a><br><a href="https://zhuanlan.zhihu.com/p/44922767" target="_blank" rel="noopener">知乎客户端线上性能数据分析系统实践</a><br><a href="https://zhuanlan.zhihu.com/p/46877662" target="_blank" rel="noopener">知乎反作弊垃圾文本识别</a><br><a href="https://zhuanlan.zhihu.com/p/45570168" target="_blank" rel="noopener">Golang 单元测试框架 gocheck 使用介绍</a><br><a href="https://zhuanlan.zhihu.com/p/46411733" target="_blank" rel="noopener">知乎移动客户端组件管理平台</a><br><a href="https://zhuanlan.zhihu.com/p/44280283" target="_blank" rel="noopener">知乎 iOS 基于 CocoaPods 实现的二进制化方案</a><br><a href="https://zhuanlan.zhihu.com/p/45374964" target="_blank" rel="noopener">知乎 Android 客户端组件化实践</a><br><a href="https://zhuanlan.zhihu.com/p/44441938" target="_blank" rel="noopener">Redis at Zhihu</a><br><a href="https://zhuanlan.zhihu.com/p/43609710" target="_blank" rel="noopener">知乎安卓端第三方库敏感代码扫描机制 - FindDanger</a><br><a href="https://zhuanlan.zhihu.com/p/42667918" target="_blank" rel="noopener">知乎移动端性能测试实践</a><br><a href="https://zhuanlan.zhihu.com/p/40985361" target="_blank" rel="noopener">知乎客户端埋点流程、模型和平台技术</a><br><a href="https://zhuanlan.zhihu.com/p/40097338" target="_blank" rel="noopener">知乎安卓客户端启动优化 - Retrofit 代理</a><br><a href="https://zhuanlan.zhihu.com/p/22973035" target="_blank" rel="noopener">Fastlane实战（一）：移动开发自动化之道</a><br><a href="https://zhuanlan.zhihu.com/p/39482667" target="_blank" rel="noopener">知乎反作弊系统「悟空」架构演进</a><br><a href="https://zhuanlan.zhihu.com/p/39155476" target="_blank" rel="noopener">知乎客户端内测和灰度方案演进</a><br><a href="https://zhuanlan.zhihu.com/p/39004143" target="_blank" rel="noopener">知乎十万级容器规模的分布式镜像仓库实践</a><br><a href="https://zhuanlan.zhihu.com/p/37387202" target="_blank" rel="noopener">知乎、清华大学联合承办CCIR2018评测 寻找中国AI潜力股</a><br><a href="https://zhuanlan.zhihu.com/p/35007020" target="_blank" rel="noopener">知乎问题标签预测开放数据集上线啦</a><br><a href="https://zhuanlan.zhihu.com/p/34988244" target="_blank" rel="noopener">算法在社区氛围的应用（三）： 机器学习在答非所问识别上的运用</a><br><a href="https://zhuanlan.zhihu.com/p/34963741" target="_blank" rel="noopener">算法在社区氛围的应用（二）：深度学习在不友善文本识别中的应用</a><br><a href="https://zhuanlan.zhihu.com/p/34864372" target="_blank" rel="noopener">算法在社区氛围的应用（一）：识别垃圾广告导流信息</a><br><a href="https://zhuanlan.zhihu.com/p/32191167" target="_blank" rel="noopener">Python 缓存框架 Tache 使用介绍</a><br><a href="https://zhuanlan.zhihu.com/p/28912353" target="_blank" rel="noopener">「2017 知乎 · 看山杯机器学习挑战赛」结束，谁获奖了？知乎还会做什么？</a><br><a href="https://zhuanlan.zhihu.com/p/27082391" target="_blank" rel="noopener">知乎湾区机器学习分享会 - 现场实录</a><br><a href="https://zhuanlan.zhihu.com/p/26843044" target="_blank" rel="noopener">寻找算法界最强大脑， 2017 知乎 · 看山杯机器学习挑战赛开始了！</a><br><a href="https://zhuanlan.zhihu.com/p/26773526" target="_blank" rel="noopener">5 月 19 日，知乎湾区沟通会，我们想和你聊聊机器学习</a><br><a href="https://zhuanlan.zhihu.com/p/26420284" target="_blank" rel="noopener">Matisse Android 图片选择器</a><br><a href="https://zhuanlan.zhihu.com/p/24992118" target="_blank" rel="noopener">RxLifecycle: 绑定你的 Observable 到生命周期上</a><br><a href="https://zhuanlan.zhihu.com/p/25835417" target="_blank" rel="noopener">基于 AC 自动机和贝叶斯方法的垃圾内容识别</a><br><a href="https://zhuanlan.zhihu.com/p/25499358" target="_blank" rel="noopener">反作弊基于左右信息熵和互信息的新词挖掘</a><br><a href="https://zhuanlan.zhihu.com/p/24951621" target="_blank" rel="noopener">Draft.js 在知乎的实践</a><br><a href="https://zhuanlan.zhihu.com/p/24808053" target="_blank" rel="noopener">知乎 SiriKit 实战</a><br><a href="https://zhuanlan.zhihu.com/p/24044342" target="_blank" rel="noopener">知乎服务化的实践与思考</a><br><a href="https://zhuanlan.zhihu.com/p/23764524" target="_blank" rel="noopener">喜大奔普，知乎全站 HTTPS</a><br><a href="https://zhuanlan.zhihu.com/p/23509238" target="_blank" rel="noopener">Wukong 反作弊系统缓存的优化</a><br><a href="https://zhuanlan.zhihu.com/p/23385044" target="_blank" rel="noopener">Spark 在反作弊聚类场景的实践</a><br><a href="https://zhuanlan.zhihu.com/p/23328430" target="_blank" rel="noopener">Yet another Sketch Mirror App for Android</a><br><a href="https://zhuanlan.zhihu.com/p/19919584" target="_blank" rel="noopener">kids 开源了！</a><br><a href="https://zhuanlan.zhihu.com/p/19728126" target="_blank" rel="noopener">关于 Heartbleed 漏洞的说明</a><br><a href="https://zhuanlan.zhihu.com/p/19550594" target="_blank" rel="noopener">kids：知乎日志系统</a></p>
 
-      
     </div>
 
     
-
-    
-    
-    
-
-    
-
-    
-       
     
     
 
-    
+      <footer class="post-footer">
 
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/01/19/netflix-culture/" rel="next" title="奈飞企业文化">
-                <i class="fa fa-chevron-left"></i> 奈飞企业文化
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/09/tools-redis-tutorial/" rel="prev" title="Redis Tutorial">
-                Redis Tutorial <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-
-
-
-        </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/01/19/netflix-culture/" rel="prev" title="奈飞企业文化">
+      <i class="fa fa-chevron-left"></i> 奈飞企业文化
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/04/09/tools-redis-tutorial/" rel="next" title="Redis Tutorial">
+      Redis Tutorial <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/avatar.png"
-                alt="ZHUANG JINXIN" />
-            
-              <p class="site-author-name" itemprop="name">ZHUANG JINXIN</p>
-              <p class="site-description motion-element" itemprop="description">Make it happen!</p>
-          </div>
-
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ZHUANG JINXIN"
+      src="/avatar.png">
+  <p class="site-author-name" itemprop="name">ZHUANG JINXIN</p>
+  <div class="site-description" itemprop="description">Make it happen!</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
           
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">59</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">17</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
           
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zhuangjinxin" title="GitHub → https://github.com/zhuangjinxin" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhuangjinxin@hotmail.com" title="E-Mail → mailto:zhuangjinxin@hotmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
 
-          
 
-          
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/zhuangjinxin" title="GitHub &rarr; https://github.com/zhuangjinxin" rel="noopener" target="_blank"><i class="fa fa-fw fa-Github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:zhuangjinxin@hotmail.com" title="E-Mail &rarr; mailto:zhuangjinxin@hotmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-E-Mail"></i>E-Mail</a>
-                </span>
-              
-            </div>
-          
 
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </section>
-
-      
-
-      
+      </div>
 
     </div>
   </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">  <a href="http://www.miitbeian.gov.cn" rel="noopener" target="_blank">京ICP备17026860号 </a>&copy; 2018 – <span itemprop="copyrightYear">2020</span>
-  <span class="with-love" id="animate">
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备17026860号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">ZHUANG JINXIN</span>
-
-  
-
-  
 </div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.6.0</div>
-
-
-
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0
+  </div>
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v6.6.0</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.1
+  </div>
 
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv" title="总访客量">
-      <i class="fa fa-users"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
     </span>
-  
-
-  
-    <span class="site-pv" title="总访问量">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
     </span>
-  
 </div>
 
 
@@ -769,106 +406,19 @@
 
 
 
-
-        
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-	
-    
-
-    
   </div>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-    
-      
-  
-  <script type="text/javascript" color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
-
-
-
-  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -883,32 +433,10 @@
 
 
 
-  
 
 
 
 
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-  
 
   
 
